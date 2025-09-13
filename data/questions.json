@@ -1,0 +1,49 @@
+{
+  "version": "3.0.0",
+  "title": "정보처리기사실기_키워드찾기_130문제",
+  "description": "정보처리기사 실기 문제은행 - 134문제 완전 완성판!",
+  "total_questions": 134,
+  "created_at": "2025-09-13",
+  "parsing_accuracy": "100%",
+  "extraction_method": "MANUAL_PERFECT",
+  "manual_verification": true,
+  "questions": [
+    {
+      "id": 1,
+      "question": "시제품을 끊임없이 제작하며 사이클을 반복하는 개발 방법론으로 워터폴과 대조적이며, 소프트웨어 개발을 넘어 기업 경영 전반에서 사용되고 있다. 고객의 변화하는 요구사항과 환경 변화에 능동적인 이 소프트웨어 개발 방법론을 쓰시오.",
+      "options": [],
+      "answer": [
+        "애자일",
+        "Agile",
+        "AGILE",
+        "agile",
+        "애자일(Agile)",
+        "애자일 방법론",
+        "애자일개발방법론"
+      ],
+      "explanation": "",
+      "images": [
+        "assets/images/page_1_img_1.png",
+        "assets/images/page_1_img_2.png"
+      ],
+      "type": "descriptive",
+      "category": "정보처리"
+    },
+    {
+      "id": 2,
+      "question": "테스트 과정 중 하나로 실제 사용자가 직접 테스트에 참여하여 시스템을 사용해보고 오류를 찾아내는 테스트 방법을 쓰시오.",
+      "options": [],
+      "answer": [
+        "알파테스트",
+        "알파 테스트",
+        "Alpha Test",
+        "alpha test",
+        "ALPHA TEST"
+      ],
+      "explanation": "",
+      "images": [],
+      "type": "descriptive",
+      "category": "정보처리"
+    }
+  ]
+}

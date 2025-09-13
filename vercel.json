@@ -2,7 +2,7 @@
   "version": 2,
   "headers": [
     {
-      "source": "/public/data/(.*)",
+      "source": "/data/(.*)",
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
@@ -15,7 +15,7 @@
       ]
     },
     {
-      "source": "/public/assets/(.*)",
+      "source": "/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",

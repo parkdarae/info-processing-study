@@ -30,8 +30,8 @@ async function loadQuestionsData() {
     try {
         console.log('📚 문제 데이터 로드 시작...');
         
-        // 여러 경로를 시도해보기
-        const paths = ['./public/data/questions.json', './data/questions.json', 'public/data/questions.json', 'data/questions.json'];
+        // 여러 경로를 시도해보기 (Vercel용 수정)
+        const paths = ['/data/questions.json', './data/questions.json', 'data/questions.json', './public/data/questions.json'];
         let response = null;
         let loadedPath = '';
         

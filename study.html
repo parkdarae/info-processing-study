@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 풀이 - 정보처리기사 실기</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="study-container">
+        <!-- 헤더 -->
+        <header class="study-header">
+            <div class="study-progress">
+                <span id="progress-text">문제 1 / 134</span>
+                <div class="progress-bar-mini">
+                    <div class="progress-fill-mini" id="header-progress-bar"></div>
+                </div>
+            </div>
+            <div class="study-mode-info">
+                <span id="current-mode">순차 풀기</span>
+                <button class="bookmark-btn" id="bookmark-toggle" title="즐겨찾기">
+                    <i class="far fa-bookmark"></i>
+                </button>
+            </div>
+            <div class="study-stats">
+                <span>정답률: <strong id="session-accuracy">0%</strong></span>
+            </div>
+        </header>
+
+        <!-- 메인 학습 영역 -->
+        <main class="study-main">
+            <div class="question-card" id="question-container">
+                <!-- 문제 번호 -->
+                <div class="question-number" id="question-number">문제 1번</div>
+                
+                <!-- 문제 이미지 (있는 경우) -->
+                <div class="question-images" id="question-images"></div>
+                
+                <!-- 문제 텍스트 -->
+                <div class="question-text" id="question-text">
+                    문제를 로딩 중입니다...
+                </div>
+
+                <!-- 답안 입력 섹션 -->
+                <div class="answer-section">
+                    <label for="answer-input" class="answer-label">
+                        <i class="fas fa-edit"></i> 답안을 입력하세요
+                    </label>
+                    <div id="answer-inputs-container">
+                        <textarea 
+                            id="answer-input" 
+                            class="answer-input" 
+                            placeholder="여기에 답안을 입력하세요..."
+                            rows="3"
+                        ></textarea>
+                    </div>
+                    <div class="input-help">
+                        <small>💡 띄어쓰기나 대소문자는 구분하지 않습니다.</small>
+                    </div>
+                </div>
+
+                <!-- 제출 버튼 -->
+                <button class="submit-btn" id="submit-answer">
+                    <i class="fas fa-check"></i> 답안 제출
+                </button>
+
+                <!-- 결과 표시 영역 -->
+                <div class="result-section" id="result-section">
+                    <div class="result-content">
+                        <div class="result-icon" id="result-icon"></div>
+                        <div class="result-text" id="result-text"></div>
+                        <div class="correct-answers" id="correct-answers"></div>
+                    </div>
+                </div>
+
+                <!-- 해설 영역 -->
+                <div class="explanation" id="explanation-section">
+                    <div class="explanation-header">
+                        <h4><i class="fas fa-lightbulb"></i> 해설</h4>
+                        <button class="explanation-toggle" id="explanation-toggle">
+                            <i class="fas fa-eye"></i> 해설 보기
+                        </button>
+                    </div>
+                    <div class="explanation-content" id="explanation-content">
+                        해설이 없습니다.
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 하단 컨트롤 -->
+        <div class="study-controls">
+            <div class="left-controls">
+                <button class="control-btn" id="home-btn">
+                    <i class="fas fa-home"></i> 홈으로
+                </button>
+                <button class="control-btn" id="prev-btn" disabled>
+                    <i class="fas fa-chevron-left"></i> 이전
+                </button>
+            </div>
+
+            <div class="center-controls">
+                <button class="control-btn" id="retry-btn" style="display: none;">
+                    <i class="fas fa-redo"></i> 다시 풀기
+                </button>
+                <button class="control-btn primary" id="next-btn" disabled>
+                    <i class="fas fa-chevron-right"></i> 다음
+                </button>
+            </div>
+
+            <div class="right-controls">
+                <button class="control-btn" id="bookmark-list-btn">
+                    <i class="fas fa-bookmark"></i> 즐겨찾기
+                </button>
+                <button class="control-btn" id="wrong-list-btn">
+                    <i class="fas fa-times-circle"></i> 오답노트
+                </button>
+            </div>
+        </div>
+
+        <!-- 학습 완료 모달 -->
+        <div id="completion-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-trophy"></i> 학습 완료!</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="completion-stats">
+                        <div class="completion-stat">
+                            <div class="stat-icon"><i class="fas fa-tasks"></i></div>
+                            <div class="stat-info">
+                                <h4>총 문제 수</h4>
+                                <span id="total-solved">0</span>개
+                            </div>
+                        </div>
+                        <div class="completion-stat">
+                            <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="stat-info">
+                                <h4>정답 수</h4>
+                                <span id="total-correct">0</span>개
+                            </div>
+                        </div>
+                        <div class="completion-stat">
+                            <div class="stat-icon"><i class="fas fa-percentage"></i></div>
+                            <div class="stat-info">
+                                <h4>정답률</h4>
+                                <span id="completion-rate">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 이스터에그: 130문제 완주시 -->
+                    <div id="easter-egg" style="display: none;">
+                        <div class="easter-egg-content">
+                            <h3>🎉 축하합니다! 🎉</h3>
+                            <p>130문제를 모두 완주하셨습니다!</p>
+                            <p><strong>🚀 레벨2 타임어택 모드</strong>가 해금되었습니다!</p>
+                            <button class="btn btn-primary" id="unlock-timeattack">
+                                타임어택 모드 체험하기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="continue-study">계속 학습</button>
+                    <button class="btn btn-primary" id="go-home">홈으로 이동</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 답안 목록 모달 (오답/즐겨찾기) -->
+        <div id="answer-list-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="list-modal-title"><i class="fas fa-list"></i> 문제 목록</h3>
+                    <button class="close-btn" id="close-list-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="answer-list" id="answer-list-content">
+                        <!-- 동적으로 생성 -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="close-list">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/study.js"></script>
+</body>
+</html>

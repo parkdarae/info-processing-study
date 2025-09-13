@@ -1,0 +1,34 @@
+{
+  "name": "info-processing-exam-app",
+  "version": "3.0.0",
+  "description": "정보처리기사 실기 문제은행 - 134개 완벽한 문제로 구성된 학습 앱",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 3000",
+    "build": "echo 'Static site - no build required'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "정보처리기사",
+    "실기시험",
+    "문제은행",
+    "학습앱",
+    "education",
+    "exam",
+    "korea"
+  ],
+  "author": "Study App Creator",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/info-processing-exam-app.git"
+  },
+  "homepage": "https://info-processing-exam-app.vercel.app",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}

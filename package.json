@@ -24,7 +24,7 @@
     "type": "git",
     "url": "https://github.com/username/info-processing-exam-app.git"
   },
-  "homepage": "https://info-processing-exam-app.vercel.app",
+  "homepage": "https://info-processing-study.vercel.app",
   "engines": {
     "node": ">=14.0.0"
   },

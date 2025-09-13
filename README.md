@@ -11,7 +11,7 @@
 
 ### 📍 **배포된 앱 접속**
 ```
-https://info-processing-exam-app.vercel.app
+https://info-processing-study.vercel.app
 ```
 
 ### 🖥️ **로컬 실행**

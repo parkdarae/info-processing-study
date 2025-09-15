@@ -201,10 +201,15 @@ function shuffleArray(array) {
 
 // ===== 이벤트 리스너 초기화 =====
 function initializeEventListeners() {
-    // 답안 제출
-    document.getElementById('submit-answer').addEventListener('click', submitAnswer);
-    
-    // 엔터키로 답안 제출
+    const on = (id, event, handler) => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener(event, handler);
+    };
+
+    // 답안 제출 버튼
+    on('submit-btn', 'click', submitAnswer);
+
+    // 엔터키로 답안 제출 (Ctrl+Enter)
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' && e.ctrlKey && !currentStudySession.isAnswered) {
             submitAnswer();
@@ -212,27 +217,21 @@ function initializeEventListeners() {
     });
 
     // 네비게이션 버튼
-    document.getElementById('home-btn').addEventListener('click', () => window.location.href = 'index.html');
-    document.getElementById('prev-btn').addEventListener('click', showPreviousQuestion);
-    document.getElementById('next-btn').addEventListener('click', showNextQuestion);
-    document.getElementById('retry-btn').addEventListener('click', retryCurrentQuestion);
+    on('home-btn', 'click', () => window.location.href = 'index.html');
+    on('prev-btn', 'click', showPreviousQuestion);
+    on('next-btn', 'click', showNextQuestion);
 
-    // 즐겨찾기 토글
-    document.getElementById('bookmark-toggle').addEventListener('click', toggleBookmark);
+    // 즐겨찾기 토글 (상단 아이콘)
+    on('bookmark-btn', 'click', toggleBookmark);
 
-    // 해설 토글
-    document.getElementById('explanation-toggle').addEventListener('click', toggleExplanation);
+    // 해설 토글 및 FAB
+    on('explanation-toggle', 'click', toggleExplanation);
+    on('explanation-fab', 'click', toggleExplanation);
 
-    // 목록 모달
-    document.getElementById('bookmark-list-btn').addEventListener('click', () => showAnswerListModal('bookmark'));
-    document.getElementById('wrong-list-btn').addEventListener('click', () => showAnswerListModal('wrong'));
-    document.getElementById('close-list-modal').addEventListener('click', closeAnswerListModal);
-    document.getElementById('close-list').addEventListener('click', closeAnswerListModal);
-
-    // 완료 모달
-    document.getElementById('continue-study').addEventListener('click', closeCompletionModal);
-    document.getElementById('go-home').addEventListener('click', () => window.location.href = 'index.html');
-    document.getElementById('unlock-timeattack').addEventListener('click', unlockTimeAttack);
+    // 완료 모달 관련 (존재 시에만)
+    on('continue-study', 'click', closeCompletionModal);
+    on('go-home', 'click', () => window.location.href = 'index.html');
+    on('unlock-timeattack', 'click', unlockTimeAttack);
 }
 
 // ===== 문제 표시 =====
@@ -287,15 +286,17 @@ function updateQuestionDisplay(question) {
 }
 
 function setupAnswerInputs(question) {
-    const container = document.getElementById('answer-inputs-container');
+    const container = document.getElementById('answer-inputs') || document.getElementById('answer-inputs-container');
     const isMultipleAnswer = Array.isArray(question.answer) && 
         question.answer.some(answer => answer.includes('①') || answer.includes('②'));
 
     if (isMultipleAnswer) {
         // 복수 답안용 입력 필드들
         const answerCount = question.answer[0].split(/[①②③④⑤]/).length - 1;
-        container.innerHTML = '';
-        container.classList.add('multiple-answers');
+        if (container) {
+            container.innerHTML = '';
+            container.classList.add('multiple-answers');
+        }
 
         for (let i = 1; i <= Math.min(answerCount, 5); i++) {
             const input = document.createElement('textarea');
@@ -308,36 +309,46 @@ function setupAnswerInputs(question) {
             label.textContent = `답안 ${i}번`;
             label.htmlFor = `answer-input-${i}`;
             
-            container.appendChild(label);
-            container.appendChild(input);
+            if (container) {
+                container.appendChild(label);
+                container.appendChild(input);
+            }
         }
     } else {
         // 단일 답안용 입력 필드
-        container.innerHTML = `
-            <textarea 
-                id="answer-input" 
-                class="answer-input" 
-                placeholder="여기에 답안을 입력하세요..."
-                rows="3"
-            ></textarea>
-        `;
-        container.classList.remove('multiple-answers');
+        if (container) {
+            container.innerHTML = `
+                <textarea 
+                    id="answer-input" 
+                    class="answer-input" 
+                    placeholder="여기에 답안을 입력하세요..."
+                    rows="3"
+                ></textarea>
+            `;
+            container.classList.remove('multiple-answers');
+        }
     }
 }
 
 function updateProgressDisplay() {
     const current = currentStudySession.currentQuestionIndex + 1;
     const total = currentStudySession.questionQueue.length;
-    const percentage = (current / total) * 100;
+    const percentage = Math.max(1, Math.round((current / Math.max(total, 1)) * 100));
 
-    document.getElementById('progress-text').textContent = `문제 ${current} / ${total}`;
-    document.getElementById('header-progress-bar').style.width = `${percentage}%`;
+    const currentEl = document.getElementById('current-question');
+    const totalEl = document.getElementById('total-questions');
+    const navEl = document.getElementById('nav-progress');
+    const percentEl = document.getElementById('progress-percent');
+    if (currentEl) currentEl.textContent = String(current);
+    if (totalEl) totalEl.textContent = String(total);
+    if (navEl) navEl.textContent = `${current} / ${total}`;
+    if (percentEl) percentEl.textContent = `${percentage}%`;
 
-    // 세션 정답률 업데이트
     const accuracy = currentStudySession.sessionTotal > 0 
         ? Math.round((currentStudySession.sessionCorrect / currentStudySession.sessionTotal) * 100) 
         : 0;
-    document.getElementById('session-accuracy').textContent = `${accuracy}%`;
+    const accEl = document.getElementById('session-accuracy');
+    if (accEl) accEl.textContent = `${accuracy}%`;
 }
 
 function updateModeInfo() {
@@ -349,7 +360,10 @@ function updateModeInfo() {
         bookmark: '체크한 문제'
     };
 
-    document.getElementById('current-mode').textContent = modeTexts[currentStudySession.mode] || currentStudySession.mode;
+    const badge = document.getElementById('mode-badge');
+    if (badge) {
+        badge.innerHTML = `<i class="fas fa-list"></i> ${modeTexts[currentStudySession.mode] || currentStudySession.mode}`;
+    }
 }
 
 // ===== 답안 제출 및 처리 =====
@@ -399,10 +413,14 @@ function submitAnswer() {
 }
 
 function collectUserAnswers() {
-    const container = document.getElementById('answer-inputs-container');
-    const inputs = container.querySelectorAll('.answer-input');
-    
-    return Array.from(inputs).map(input => input.value.trim()).filter(answer => answer);
+    const container = document.getElementById('answer-inputs') || document.getElementById('answer-inputs-container');
+    if (container) {
+        const inputs = container.querySelectorAll('.answer-input, .modern-input');
+        const values = Array.from(inputs).map(input => input.value.trim()).filter(answer => answer);
+        if (values.length > 0) return values;
+    }
+    const single = document.getElementById('answer-input');
+    return single && single.value ? [single.value.trim()] : [];
 }
 
 function checkAnswer(question, userAnswers) {
@@ -543,30 +561,29 @@ function showResult(isCorrect, question) {
 
     // 해설 준비
     const explanationSection = document.getElementById('explanation-section');
-    const explanationContent = document.getElementById('explanation-content');
-    
-    if (question.explanation && question.explanation.trim()) {
-        explanationContent.textContent = question.explanation;
-        explanationSection.style.display = 'block';
-    } else {
-        explanationSection.style.display = 'none';
+    const explanationText = document.getElementById('explanation-text');
+    if (explanationSection && explanationText) {
+        if (question.explanation && String(question.explanation).trim()) {
+            explanationText.textContent = question.explanation;
+            explanationSection.style.display = 'block';
+        } else {
+            explanationSection.style.display = 'none';
+        }
     }
 }
 
 function updateSubmitButton() {
-    const submitBtn = document.getElementById('submit-answer');
+    const submitBtn = document.getElementById('submit-btn');
     const nextBtn = document.getElementById('next-btn');
-    const retryBtn = document.getElementById('retry-btn');
+    if (!submitBtn || !nextBtn) return;
 
     if (currentStudySession.isAnswered) {
-        submitBtn.textContent = '다음 문제';
-        submitBtn.innerHTML = '<i class="fas fa-arrow-right"></i> 다음 문제';
+        submitBtn.innerHTML = '<div class="btn-content"><span class="btn-text">다음 문제</span><i class="fas fa-arrow-right btn-icon"></i></div><div class="btn-ripple"></div>';
+        submitBtn.disabled = false;
         nextBtn.disabled = false;
-        retryBtn.style.display = 'inline-block';
     } else {
-        submitBtn.innerHTML = '<i class="fas fa-check"></i> 답안 제출';
+        submitBtn.innerHTML = '<div class="btn-content"><span class="btn-text">정답 확인</span><i class="fas fa-arrow-right btn-icon"></i></div><div class="btn-ripple"></div>';
         nextBtn.disabled = true;
-        retryBtn.style.display = 'none';
     }
 }
 
@@ -606,20 +623,21 @@ function updateNavigationButtons() {
 
 function resetAnswerSection() {
     // 답안 입력 필드 초기화
-    const inputs = document.querySelectorAll('.answer-input');
+    const inputs = document.querySelectorAll('.answer-input, .modern-input');
     inputs.forEach(input => {
         input.value = '';
         input.style.borderColor = '#e5e7eb';
     });
 
     // 결과 섹션 숨기기
-    document.getElementById('result-section').style.display = 'none';
+    const resultSection = document.getElementById('result-section');
+    if (resultSection) resultSection.style.display = 'none';
     
     // 해설 섹션 초기화
-    document.getElementById('explanation-section').style.display = 'none';
-    const explanationContent = document.getElementById('explanation-content');
-    explanationContent.style.display = 'none';
-    document.getElementById('explanation-toggle').innerHTML = '<i class="fas fa-eye"></i> 해설 보기';
+    const expSection = document.getElementById('explanation-section');
+    const expText = document.getElementById('explanation-text');
+    if (expSection) expSection.style.display = 'none';
+    if (expText) expText.style.display = 'none';
 }
 
 // ===== 즐겨찾기 및 해설 토글 =====
@@ -627,7 +645,7 @@ function toggleBookmark() {
     const question = currentStudySession.currentQuestion;
     if (!question) return;
 
-    const bookmarkBtn = document.getElementById('bookmark-toggle');
+    const bookmarkBtn = document.getElementById('bookmark-btn');
     const isBookmarked = userData.bookmarkedQuestions.has(question.id);
 
     if (isBookmarked) {
@@ -647,7 +665,7 @@ function updateBookmarkStatus() {
     const question = currentStudySession.currentQuestion;
     if (!question) return;
 
-    const bookmarkBtn = document.getElementById('bookmark-toggle');
+    const bookmarkBtn = document.getElementById('bookmark-btn');
     const isBookmarked = userData.bookmarkedQuestions.has(question.id);
     
     bookmarkBtn.innerHTML = isBookmarked 
@@ -656,15 +674,12 @@ function updateBookmarkStatus() {
 }
 
 function toggleExplanation() {
-    const explanationContent = document.getElementById('explanation-content');
-    const explanationToggle = document.getElementById('explanation-toggle');
-    
-    if (explanationContent.style.display === 'none' || !explanationContent.style.display) {
-        explanationContent.style.display = 'block';
-        explanationToggle.innerHTML = '<i class="fas fa-eye-slash"></i> 해설 숨기기';
+    const explanationText = document.getElementById('explanation-text');
+    if (!explanationText) return;
+    if (explanationText.style.display === 'none' || !explanationText.style.display) {
+        explanationText.style.display = 'block';
     } else {
-        explanationContent.style.display = 'none';
-        explanationToggle.innerHTML = '<i class="fas fa-eye"></i> 해설 보기';
+        explanationText.style.display = 'none';
     }
 }
 

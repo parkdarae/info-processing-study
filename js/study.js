@@ -583,6 +583,7 @@ function updateSubmitButton() {
         nextBtn.disabled = false;
     } else {
         submitBtn.innerHTML = '<div class="btn-content"><span class="btn-text">정답 확인</span><i class="fas fa-arrow-right btn-icon"></i></div><div class="btn-ripple"></div>';
+        submitBtn.disabled = false;
         nextBtn.disabled = true;
     }
 }

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 풀이 - 정보처리기사 실기</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="modern-study-body">
+    <div class="modern-study-container">
+        <!-- 현대적인 헤더 -->
+        <header class="modern-study-header">
+            <div class="header-content">
+                <div class="study-info">
+                    <h1 class="study-title">
+                        <i class="fas fa-brain gradient-icon"></i>
+                        정보처리기사 실기
+                    </h1>
+                    <div class="mode-badge" id="mode-badge">
+                        <i class="fas fa-list"></i>
+                        순차 풀이
+                    </div>
+                </div>
+                <div class="progress-section">
+                    <div class="progress-text">
+                        <span class="current" id="current-question">1</span>
+                        <span class="divider">/</span>
+                        <span class="total" id="total-questions">134</span>
+                    </div>
+                    <div class="circular-progress">
+                        <svg class="progress-ring" width="60" height="60">
+                            <circle class="progress-ring-bg" stroke="rgba(255,255,255,0.2)" stroke-width="3" fill="transparent" r="26" cx="30" cy="30"/>
+                            <circle class="progress-ring-bar" stroke="url(#gradient)" stroke-width="3" fill="transparent" r="26" cx="30" cy="30" id="progress-circle"/>
+                        </svg>
+                        <div class="progress-percent" id="progress-percent">1%</div>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#00D4FF"/>
+                                <stop offset="100%" style="stop-color:#5B73FF"/>
+                            </linearGradient>
+                        </defs>
+                    </div>
+                </div>
+            </div>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>정답률: <strong id="session-accuracy">0%</strong></span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <span>시간: <strong id="study-time">00:00</strong></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 메인 문제 영역 -->
+        <main class="modern-study-main">
+            <div class="question-container">
+                <!-- 문제 카드 -->
+                <div class="modern-question-card" id="question-card">
+                    <div class="card-header">
+                        <div class="question-meta">
+                            <div class="question-number" id="question-number">
+                                <i class="fas fa-hashtag"></i>
+                                Question 1
+                            </div>
+                            <button class="bookmark-btn" id="bookmark-btn" title="즐겨찾기에 추가">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                        <div class="difficulty-badge">
+                            <i class="fas fa-star"></i>
+                            실기
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <!-- 문제 내용 -->
+                        <div class="question-content">
+                            <div class="question-text" id="question-text">
+                                <div class="loading-skeleton">
+                                    <div class="skeleton-line"></div>
+                                    <div class="skeleton-line short"></div>
+                                    <div class="skeleton-line"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- 이미지 영역 -->
+                            <div class="question-images" id="question-images"></div>
+                            
+                            <!-- 선택지 영역 -->
+                            <div class="question-options" id="question-options"></div>
+                        </div>
+
+                        <!-- 현대적인 답안 입력 -->
+                        <div class="answer-section">
+                            <div class="input-wrapper">
+                                <label class="input-label">
+                                    <i class="fas fa-edit"></i>
+                                    답안 입력
+                                </label>
+                                <div class="answer-inputs" id="answer-inputs">
+                                    <div class="input-field">
+                                        <textarea 
+                                            class="modern-input" 
+                                            id="answer-input"
+                                            placeholder="정답을 입력하세요... (대소문자, 띄어쓰기 무관)"
+                                            rows="2"
+                                        ></textarea>
+                                        <div class="input-focus-border"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="input-help">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>키워드 중심으로 답안을 작성해주세요</span>
+                                </div>
+                            </div>
+
+                            <button class="modern-submit-btn" id="submit-btn" disabled>
+                                <div class="btn-content">
+                                    <span class="btn-text">정답 확인</span>
+                                    <i class="fas fa-arrow-right btn-icon"></i>
+                                </div>
+                                <div class="btn-ripple"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 결과 카드 -->
+                <div class="result-card" id="result-section">
+                    <div class="result-content">
+                        <div class="result-header">
+                            <div class="result-icon" id="result-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <h3 class="result-title" id="result-text">정답입니다!</h3>
+                        </div>
+                        <div class="correct-answers" id="correct-answer-display">
+                            <div class="answers-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>정답 예시</h4>
+                            </div>
+                            <div class="answer-chips" id="correct-answers"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 해설 카드 -->
+                <div class="explanation-card" id="explanation-section">
+                    <div class="explanation-header" id="explanation-toggle">
+                        <div class="explanation-title">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>상세 해설</h4>
+                        </div>
+                        <button class="toggle-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="explanation-content">
+                        <p id="explanation-text">해설이 준비 중입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 플로팅 액션 버튼들 -->
+        <div class="floating-actions">
+            <button class="fab secondary" id="explanation-fab" title="해설 보기">
+                <i class="fas fa-lightbulb"></i>
+            </button>
+        </div>
+
+        <!-- 현대적인 하단 네비게이션 -->
+        <nav class="modern-nav-bar">
+            <button class="nav-btn" id="home-btn">
+                <i class="fas fa-home"></i>
+                <span>홈</span>
+            </button>
+            
+            <div class="nav-center">
+                <button class="nav-btn" id="prev-btn" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                    <span>이전</span>
+                </button>
+                <div class="question-indicator">
+                    <span id="nav-progress">1 / 134</span>
+                </div>
+                <button class="nav-btn primary" id="next-btn">
+                    <span>다음</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <button class="nav-btn" id="menu-btn">
+                <i class="fas fa-ellipsis-h"></i>
+                <span>메뉴</span>
+            </button>
+        </nav>
+
+        <!-- 현대적인 완료 모달 -->
+        <div class="modern-modal" id="completion-modal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-card">
+                <div class="modal-header">
+                    <div class="trophy-animation">
+                        <i class="fas fa-trophy"></i>
+                        <div class="confetti"></div>
+                    </div>
+                    <h2>🎉 학습 완료!</h2>
+                    <p>수고하셨습니다. 훌륭한 성과를 거두셨네요!</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon correct">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-value" id="completion-accuracy">85%</div>
+                        <div class="stat-label">정답률</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon time">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-value" id="completion-time">15:30</div>
+                        <div class="stat-label">소요시간</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon score">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-value" id="completion-score">850</div>
+                        <div class="stat-label">획득점수</div>
+                    </div>
+                </div>
+
+                <!-- 이스터에그 -->
+                <div class="easter-egg" id="easter-egg" style="display: none;">
+                    <div class="easter-content">
+                        <h3>🌟 완벽한 학습자!</h3>
+                        <p>모든 134문제를 완주하셨습니다!</p>
+                        <div class="unlock-notification">
+                            <i class="fas fa-rocket"></i>
+                            <span>레벨2 타임어택 모드 해금!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="action-btn secondary" id="review-wrong">
+                        <i class="fas fa-redo"></i>
+                        틀린 문제 다시보기
+                    </button>
+                    <button class="action-btn primary" id="go-home">
+                        <i class="fas fa-home"></i>
+                        홈으로 돌아가기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./js/study.js"></script>
+</body>
+</html>

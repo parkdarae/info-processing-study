@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학습 통계 - 정보처리기사 실기</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- 헤더 -->
+        <header class="header stats-header">
+            <div class="header-content">
+                <h1><i class="fas fa-chart-line"></i> 학습 통계</h1>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" onclick="window.location.href='index.html'">
+                        <i class="fas fa-home"></i> 홈으로
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- 메인 컨텐츠 -->
+        <main class="main-content stats-main">
+            <!-- 종합 통계 -->
+            <section class="overview-stats">
+                <h2><i class="fas fa-trophy"></i> 종합 현황</h2>
+                <div class="overview-grid">
+                    <div class="overview-card total-progress">
+                        <div class="card-icon"><i class="fas fa-tasks"></i></div>
+                        <div class="card-content">
+                            <h3>전체 진도율</h3>
+                            <div class="big-number" id="total-progress-number">0%</div>
+                            <div class="progress-bar large">
+                                <div class="progress-fill" id="total-progress-bar"></div>
+                            </div>
+                            <p class="card-sub">총 <span id="total-studied">0</span>개 / 134개 문제 완료</p>
+                        </div>
+                    </div>
+
+                    <div class="overview-card accuracy">
+                        <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="card-content">
+                            <h3>전체 정답률</h3>
+                            <div class="big-number" id="accuracy-number">0%</div>
+                            <div class="progress-bar large">
+                                <div class="progress-fill correct" id="accuracy-bar"></div>
+                            </div>
+                            <p class="card-sub"><span id="correct-answers">0</span>개 정답 / <span id="total-answers">0</span>개 시도</p>
+                        </div>
+                    </div>
+
+                    <div class="overview-card streak">
+                        <div class="card-icon"><i class="fas fa-fire"></i></div>
+                        <div class="card-content">
+                            <h3>연속 학습</h3>
+                            <div class="big-number" id="streak-number">0일</div>
+                            <div class="streak-info">
+                                <div class="streak-item">
+                                    <span class="label">현재 연속</span>
+                                    <span class="value" id="current-streak">0일</span>
+                                </div>
+                                <div class="streak-item">
+                                    <span class="label">총 학습일</span>
+                                    <span class="value" id="total-days">0일</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="overview-card level">
+                        <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="card-content">
+                            <h3>학습 레벨</h3>
+                            <div class="big-number" id="level-number">초보자</div>
+                            <div class="level-progress">
+                                <div class="level-bar">
+                                    <div class="level-fill" id="level-progress-bar"></div>
+                                </div>
+                                <p class="card-sub">다음 레벨까지 <span id="next-level-need">0</span>문제</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 학습 모드별 통계 -->
+            <section class="mode-stats">
+                <h2><i class="fas fa-chart-bar"></i> 모드별 통계</h2>
+                <div class="mode-stats-grid">
+                    <div class="mode-stat-card">
+                        <div class="mode-icon sequential">
+                            <i class="fas fa-list-ol"></i>
+                        </div>
+                        <div class="mode-info">
+                            <h3>순차 풀이</h3>
+                            <div class="mode-numbers">
+                                <span class="mode-number" id="sequential-progress">0/134</span>
+                                <span class="mode-rate" id="sequential-rate">0%</span>
+                            </div>
+                            <div class="mode-bar">
+                                <div class="mode-fill" id="sequential-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mode-stat-card">
+                        <div class="mode-icon random">
+                            <i class="fas fa-shuffle"></i>
+                        </div>
+                        <div class="mode-info">
+                            <h3>랜덤 풀이</h3>
+                            <div class="mode-numbers">
+                                <span class="mode-number" id="random-sessions">0회</span>
+                                <span class="mode-rate" id="random-rate">0%</span>
+                            </div>
+                            <div class="mode-bar">
+                                <div class="mode-fill" id="random-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mode-stat-card">
+                        <div class="mode-icon wrong">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <div class="mode-info">
+                            <h3>오답 풀이</h3>
+                            <div class="mode-numbers">
+                                <span class="mode-number" id="wrong-count">0개</span>
+                                <span class="mode-rate" id="wrong-improvement">0%</span>
+                            </div>
+                            <div class="mode-bar">
+                                <div class="mode-fill wrong" id="wrong-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mode-stat-card">
+                        <div class="mode-icon bookmark">
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                        <div class="mode-info">
+                            <h3>즐겨찾기</h3>
+                            <div class="mode-numbers">
+                                <span class="mode-number" id="bookmark-count">0개</span>
+                                <span class="mode-rate" id="bookmark-rate">0%</span>
+                            </div>
+                            <div class="mode-bar">
+                                <div class="mode-fill bookmark" id="bookmark-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 차트 섹션 -->
+            <section class="charts-section">
+                <div class="charts-grid">
+                    <!-- 일별 학습 현황 -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3><i class="fas fa-calendar-alt"></i> 최근 7일 학습 현황</h3>
+                            <div class="chart-controls">
+                                <select id="chart-period">
+                                    <option value="7">최근 7일</option>
+                                    <option value="30">최근 30일</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="dailyChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- 정답률 분포 -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3><i class="fas fa-pie-chart"></i> 정답률 분포</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="accuracyChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- 학습 패턴 -->
+                    <div class="chart-card full-width">
+                        <div class="chart-header">
+                            <h3><i class="fas fa-line-chart"></i> 누적 학습 진도</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="progressChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 상세 분석 -->
+            <section class="detailed-analysis">
+                <h2><i class="fas fa-microscope"></i> 상세 분석</h2>
+                <div class="analysis-grid">
+                    <!-- 취약 분야 -->
+                    <div class="analysis-card">
+                        <h3><i class="fas fa-exclamation-triangle"></i> 취약 분야</h3>
+                        <div class="weak-areas" id="weak-areas">
+                            <div class="weak-area-item">
+                                <span class="area-name">데이터베이스</span>
+                                <div class="area-bar">
+                                    <div class="area-fill" style="width: 45%"></div>
+                                </div>
+                                <span class="area-rate">45%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 강점 분야 -->
+                    <div class="analysis-card">
+                        <h3><i class="fas fa-star"></i> 강점 분야</h3>
+                        <div class="strong-areas" id="strong-areas">
+                            <div class="strong-area-item">
+                                <span class="area-name">프로그래밍</span>
+                                <div class="area-bar">
+                                    <div class="area-fill strong" style="width: 85%"></div>
+                                </div>
+                                <span class="area-rate">85%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 학습 권장사항 -->
+                    <div class="analysis-card full-width">
+                        <h3><i class="fas fa-lightbulb"></i> 학습 권장사항</h3>
+                        <div class="recommendations" id="recommendations">
+                            <div class="recommendation-item">
+                                <div class="rec-icon">
+                                    <i class="fas fa-target"></i>
+                                </div>
+                                <div class="rec-content">
+                                    <h4>오답 집중 학습</h4>
+                                    <p>현재 <span id="wrong-question-count">0</span>개의 오답 문제가 있습니다. 이 문제들을 다시 풀어보세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 최근 학습 활동 -->
+            <section class="recent-activity-detailed">
+                <h2><i class="fas fa-history"></i> 최근 학습 활동</h2>
+                <div class="activity-timeline" id="activity-timeline">
+                    <!-- 동적으로 생성 -->
+                </div>
+            </section>
+        </main>
+
+        <!-- 푸터 -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 정보처리기사 실기 문제은행. 모든 권리 보유.</p>
+                <div class="footer-links">
+                    <a href="#" onclick="exportDetailedData()">상세 데이터 내보내기</a>
+                    <a href="#" onclick="printStats()">통계 인쇄</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./js/stats.js"></script>
+</body>
+</html>

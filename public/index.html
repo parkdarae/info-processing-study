@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정보처리기사 실기 문제은행</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 헤더 -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-graduation-cap"></i> 정보처리기사 실기 문제은행</h1>
+                <div class="header-stats">
+                    <span id="total-progress">진도율: <strong>0%</strong></span>
+                    <span id="today-studied">오늘 학습: <strong>0</strong>문제</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 메인 컨텐츠 -->
+        <main class="main-content">
+            <!-- 학습 모드 선택 -->
+            <section class="study-modes">
+                <h2><i class="fas fa-book-open"></i> 학습 모드 선택</h2>
+                <div class="mode-grid">
+                    <button class="mode-btn sequential" data-mode="sequential">
+                        <i class="fas fa-list-ol"></i>
+                        <div class="mode-info">
+                            <h3>순차 풀기</h3>
+                            <p>1번부터 마지막까지 순서대로</p>
+                            <span class="mode-stats">진도: <span id="sequential-progress">0/134</span></span>
+                        </div>
+                    </button>
+
+                    <button class="mode-btn random" data-mode="random">
+                        <i class="fas fa-shuffle"></i>
+                        <div class="mode-info">
+                            <h3>랜덤 풀기</h3>
+                            <p>무작위 순서로 문제 출제</p>
+                            <span class="mode-stats">풀이: <span id="random-count">0</span>회</span>
+                        </div>
+                    </button>
+
+                    <button class="mode-btn range" data-mode="range">
+                        <i class="fas fa-sliders-h"></i>
+                        <div class="mode-info">
+                            <h3>범위 설정</h3>
+                            <p>원하는 구간만 반복 학습</p>
+                            <span class="mode-stats">설정: <span id="range-info">미설정</span></span>
+                        </div>
+                    </button>
+
+                    <button class="mode-btn wrong" data-mode="wrong">
+                        <i class="fas fa-times-circle"></i>
+                        <div class="mode-info">
+                            <h3>오답만 풀기</h3>
+                            <p>틀린 문제만 다시 도전</p>
+                            <span class="mode-stats">오답: <span id="wrong-count">0</span>개</span>
+                        </div>
+                    </button>
+
+                    <button class="mode-btn bookmark" data-mode="bookmark">
+                        <i class="fas fa-bookmark"></i>
+                        <div class="mode-info">
+                            <h3>체크한 문제</h3>
+                            <p>즐겨찾기한 문제만 학습</p>
+                            <span class="mode-stats">체크: <span id="bookmark-count">0</span>개</span>
+                        </div>
+                    </button>
+                </div>
+            </section>
+
+            <!-- 통계 및 분석 -->
+            <section class="statistics">
+                <h2><i class="fas fa-chart-bar"></i> 학습 현황</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-tasks"></i></div>
+                        <div class="stat-info">
+                            <h3>전체 진도율</h3>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="overall-progress-bar"></div>
+                            </div>
+                            <span class="stat-value" id="overall-percentage">0%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="stat-info">
+                            <h3>정답률</h3>
+                            <div class="progress-bar">
+                                <div class="progress-fill correct" id="correct-rate-bar"></div>
+                            </div>
+                            <span class="stat-value" id="correct-percentage">0%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-calendar-day"></i></div>
+                        <div class="stat-info">
+                            <h3>연속 학습</h3>
+                            <span class="stat-value" id="streak-days">0일</span>
+                            <p class="stat-sub">연속 학습 중</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-fire"></i></div>
+                        <div class="stat-info">
+                            <h3>학습 레벨</h3>
+                            <span class="stat-value" id="user-level">초보자</span>
+                            <p class="stat-sub">다음 레벨까지</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 최근 학습 기록 -->
+            <section class="recent-activity">
+                <h2><i class="fas fa-history"></i> 최근 학습 기록</h2>
+                <div class="activity-list" id="recent-activities">
+                    <div class="activity-item placeholder">
+                        <div class="activity-icon"><i class="fas fa-play"></i></div>
+                        <div class="activity-info">
+                            <p>학습을 시작해보세요!</p>
+                            <small>위에서 학습 모드를 선택하세요.</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 범위 설정 모달 -->
+        <div id="range-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-sliders-h"></i> 범위 설정</h3>
+                    <button class="close-btn" id="close-range-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="range-inputs">
+                        <div class="input-group">
+                            <label for="start-range">시작 문제번호</label>
+                            <input type="number" id="start-range" min="1" max="134" value="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="end-range">끝 문제번호</label>
+                            <input type="number" id="end-range" min="1" max="134" value="134">
+                        </div>
+                    </div>
+                    <div class="range-preview">
+                        <p>선택된 범위: <span id="range-preview-text">1번 ~ 134번 (134문제)</span></p>
+                    </div>
+                    <div class="range-mode-select">
+                        <label>
+                            <input type="radio" name="range-mode" value="sequential" checked>
+                            순차 풀기
+                        </label>
+                        <label>
+                            <input type="radio" name="range-mode" value="random">
+                            랜덤 풀기
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="cancel-range">취소</button>
+                    <button class="btn btn-primary" id="confirm-range">학습 시작</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 푸터 -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 정보처리기사 실기 문제은행. 모든 권리 보유.</p>
+                <div class="footer-links">
+                    <a href="#" onclick="showStats()">상세 통계</a>
+                    <a href="#" onclick="exportData()">데이터 내보내기</a>
+                    <a href="#" onclick="resetProgress()">진도 초기화</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

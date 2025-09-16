@@ -699,9 +699,32 @@ function showCompletionModal() {
         : 0;
     completionRate.textContent = `${rate}%`;
 
-    // 이스터에그: 130문제 완주 체크
+    // 이스터에그: 완벽한 성취 체크 (134문제, 100%, 20분 이내)
     const totalStudiedEver = userData.studiedQuestions.size;
-    if (totalStudiedEver >= 130) {
+    const sessionTime = Math.floor((Date.now() - currentStudySession.startTimeMs) / 1000 / 60); // 분 단위
+    const isPerfectAchievement = (
+        currentStudySession.questionQueue.length === 134 && // 전체 134문제
+        rate === 100 && // 100% 정답률
+        sessionTime <= 20 // 20분 이내
+    );
+    
+    if (isPerfectAchievement) {
+        // 완벽한 성취 이스터에그
+        easterEgg.innerHTML = `
+            <div class="perfect-achievement">
+                <div class="gift-box">🎁</div>
+                <h3>🌟 멋져요 대위님! 여기까지 왔군요! 🌟</h3>
+                <p>이 화면을 캡쳐해주세요 ^^!</p>
+                <div class="achievement-stats">
+                    <div>📚 134문제 완주</div>
+                    <div>🎯 100% 정답률</div>
+                    <div>⚡ ${sessionTime}분 완료</div>
+                </div>
+            </div>
+        `;
+        easterEgg.style.display = 'block';
+    } else if (totalStudiedEver >= 130) {
+        // 기존 130문제 완주 이스터에그
         easterEgg.style.display = 'block';
     }
 

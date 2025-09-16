@@ -282,3 +282,57 @@ section h2 i {
 .mode-btn:nth-child(4) { animation-delay: 0.4s; }
 .mode-btn:nth-child(5) { animation-delay: 0.5s; }
 
+/* 완벽한 성취 이스터에그 */
+.perfect-achievement {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    color: white;
+    animation: perfectGlow 2s ease-in-out infinite alternate;
+}
+
+.perfect-achievement .gift-box {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+.perfect-achievement h3 {
+    font-size: 1.4rem;
+    margin: 12px 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.perfect-achievement p {
+    font-size: 1.1rem;
+    margin: 8px 0 16px 0;
+    color: #f0f8ff;
+}
+
+.achievement-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.achievement-stats div {
+    background: rgba(255,255,255,0.2);
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes perfectGlow {
+    0% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.5); }
+    100% { box-shadow: 0 0 30px rgba(118, 75, 162, 0.8); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+

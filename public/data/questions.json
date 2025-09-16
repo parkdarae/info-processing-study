@@ -22,7 +22,10 @@
         "애자일개발방법론"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_1_img_1.png",
+        "assets/images/page_1_img_2.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -37,7 +40,10 @@
         "소프트웨어의 품질을 개선하고 개발 효율성을 높이기 위함"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_1_img_1.png",
+        "assets/images/page_1_img_2.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -53,7 +59,10 @@
         "기능 비기능"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_1_img_1.png",
+        "assets/images/page_1_img_2.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -70,7 +79,10 @@
         "클래스 다이어그램"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_1_img_1.png",
+        "assets/images/page_1_img_2.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -88,7 +100,10 @@
         "애자일개발방법론"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_1_img_1.png",
+        "assets/images/page_1_img_2.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -103,7 +118,10 @@
         "소프트웨어의 품질을 개선하고 개발 효율성을 높이기 위함"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_1_img_1.png",
+        "assets/images/page_1_img_2.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -119,7 +137,10 @@
         "기능 비기능"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_1_img_1.png",
+        "assets/images/page_1_img_2.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -136,7 +157,10 @@
         "클래스 다이어그램"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_1_img_1.png",
+        "assets/images/page_1_img_2.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -333,12 +357,7 @@
     {
       "id": 20,
       "question": "관계대수에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 쓰시오.\n관계대수는 관계형 데이터베이스에서 원하는 정보와 그 정보를 검색하기 위해서 어떻게 유도하는가를 기술하는 절차적인 언어이다. 관계대수에 사용되는 연산은 다음과 같다.\n• 합집합(UNION)은 두 릴레이션에 존재하는 튜플의 합집합을 구하되, 결과로 생성된 릴레이션에서 중복되는 튜플은 제거되는 연산으로 사용하는 기호는 (   )①이다.\n• 차집합(DIFFERENCE)은 두 릴레이션에 존재하는 튜플의 차집합을 구하는 연산으로 사용하는 기호는 (   )②이다.\n• 곱집합(CARTESIAN PRODUCT)은 두 릴레이션에 있는 튜플들의 순서쌍을 구하는 연산으로 사용하는 기호는 (   )③이다.\n• 선택(SELECT)은 주어진 릴레이션에서 주어진 조건을 만족하는 튜플들의 부분집합을 구하는 연산으로 사용하는 기호는 (   )④이다.\n• 투영(PROJECT)은 주어진 릴레이션에서 속성 리스트에 제시된 속성 값만을 추출하는 연산으로 사용하는 기호는 (   )⑤이다.",
-      "options": [
-        "① ∪, ② -, ③ ×, ④ σ, ⑤ π",
-        "① U, ② -, ③ X, ④ 시그마, ⑤ 파이",
-        "① 합집합, ② 차집합, ③ 곱집합, ④ 선택, ⑤ 투영",
-        "①∪ ②- ③× ④σ ⑤π"
-      ],
+      "options": [],
       "answer": [
         "① ∪, ② -, ③ ×, ④ σ, ⑤ π",
         "①∪ ②- ③× ④σ ⑤π",
@@ -348,7 +367,7 @@
       "images": [
         "assets/images/page_6_img_1.png"
       ],
-      "type": "multiple_choice",
+      "type": "descriptive",
       "category": "정보처리"
     },
     {
@@ -424,7 +443,11 @@
       "answer": [
         "① ㉠, ② ㉡, ③ ㉢",
         "①㉠ ②㉡ ③㉢",
-        "① ㉠ ② ㉡ ③ ㉢"
+        "① ㉠ ② ㉡ ③ ㉢",
+        "① ㄱ, ② ㄴ, ③ ㄷ",
+        "①ㄱ ②ㄴ ③ㄷ",
+        "ㄱ, ㄴ, ㄷ",
+        "ㄱㄴㄷ"
       ],
       "explanation": "",
       "images": [
@@ -640,7 +663,11 @@
       "answer": [
         "① ㉡, ② ㉢, ③ ㉠",
         "①㉡ ②㉢ ③㉠",
-        "① 객체, ② 동적, ③ 기능"
+        "① 객체, ② 동적, ③ 기능",
+        "① ㄴ, ② ㄷ, ③ ㄱ",
+        "①ㄴ ②ㄷ ③ㄱ",
+        "ㄴ, ㄷ, ㄱ",
+        "ㄴㄷㄱ"
       ],
       "explanation": "Rumbaugh의 OMT(Object Modeling Technique)는 객체 모델, 동적 모델, 기능 모델로 구성됩니다.",
       "images": [
@@ -1003,7 +1030,11 @@
       "options": [],
       "answer": [
         "① ㉠, ② ㉡, ③ ㉢",
-        "①㉠ ②㉡ ③㉢"
+        "①㉠ ②㉡ ③㉢",
+        "① ㄱ, ② ㄴ, ③ ㄷ",
+        "①ㄱ ②ㄴ ③ㄷ",
+        "ㄱ, ㄴ, ㄷ",
+        "ㄱㄴㄷ"
       ],
       "explanation": "",
       "images": [
@@ -1132,9 +1163,7 @@
         "Unit Test"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_25_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1752,7 +1781,9 @@
         "인터넷 프로토콜"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1765,7 +1796,9 @@
         "①TCP ②UDP"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1779,7 +1812,9 @@
         "맥 어드레스"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1793,7 +1828,9 @@
         "통합 인증"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1807,7 +1844,9 @@
         "모바일 임시 네트워크"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1820,7 +1859,9 @@
         "Routing Information Protocol"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1834,7 +1875,9 @@
         "분산 해시 테이블"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1848,7 +1891,9 @@
         "정보보호 관리체계"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1861,7 +1906,9 @@
         "① System on Chip, ② Virtualization"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1874,7 +1921,9 @@
         "스트라이핑, 미러링, 패리티"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1887,7 +1936,9 @@
         "대량의 데이터에서 유용한 정보를 발견하는 기법"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1900,7 +1951,9 @@
         "락을 사용하여 트랜잭션이 완료될 때까지 추가적인 접근을 제한함으로써 상호 간섭을 방지하는 기법"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1914,7 +1967,9 @@
         "버전 정보 문서"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1927,7 +1982,9 @@
         "128비트, 192비트, 256비트"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1940,7 +1997,9 @@
         "탈중앙화, 무결성, 합의"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1954,7 +2013,9 @@
         "서비스형 소프트웨어"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1967,7 +2028,9 @@
         "소프트웨어 개발과 운영 간의 협업을 강화하는 방법론"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1980,7 +2043,9 @@
         "가상화 기술을 이용해 애플리케이션을 격리된 환경에서 실행하는 도구"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1993,7 +2058,9 @@
         "각 서비스가 독립적으로 개발, 배포, 확장될 수 있는 아키텍처 패턴"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2006,7 +2073,9 @@
         "마이크로서비스 아키텍처에서 여러 서비스에 대한 단일 진입점 역할"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2019,7 +2088,9 @@
         "REST API의 대안으로 더 효율적인 데이터 페칭을 가능하게 하는 쿼리 언어"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2032,7 +2103,9 @@
         "코드 변경사항을 자동으로 빌드, 테스트, 배포하는 자동화된 프로세스"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2045,7 +2118,9 @@
         "AI는 더 넓은 개념이고 ML은 AI를 구현하는 방법 중 하나"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2058,7 +2133,9 @@
         "관계형 데이터베이스의 한계를 극복하기 위해 개발된 데이터베이스"
       ],
       "explanation": "",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2072,7 +2149,9 @@
         "요구사항 분석, 설계, 구현"
       ],
       "explanation": "정보처리기사 실기의 핵심 영역들을 포괄하는 개념들입니다.",
-      "images": [],
+      "images": [
+        "assets/images/page_44_img_1.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     }

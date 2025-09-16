@@ -979,9 +979,7 @@
         "두 개의 분기를 모두 커버하는 테스트 케이스"
       ],
       "explanation": "분기 커버리지는 모든 결정 포인트에서 참과 거짓을 모두 실행하는 테스트입니다.",
-      "images": [
-        "assets/images/page_21_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -995,9 +993,7 @@
         "명세 기반 테스트"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_21_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1010,9 +1006,7 @@
         "True Oracle"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_22_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },

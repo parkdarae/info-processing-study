@@ -170,6 +170,9 @@
             <button class="fab secondary" id="explanation-fab" title="해설 보기">
                 <i class="fas fa-lightbulb"></i>
             </button>
+            <button class="fab" id="settings-fab" title="가독성 설정">
+                <i class="fas fa-sliders-h"></i>
+            </button>
         </div>
 
         <!-- 현대적인 하단 네비게이션 -->
@@ -198,6 +201,36 @@
                 <span>메뉴</span>
             </button>
         </nav>
+
+        <!-- 설정 패널: 가독성 스위처 & 테마 -->
+        <aside class="settings-panel" id="settings-panel" aria-hidden="true">
+            <div class="settings-header">
+                <div class="settings-title">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>가독성 설정</span>
+                </div>
+                <button class="settings-close" id="settings-close" aria-label="닫기">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="settings-body">
+                <div class="settings-row">
+                    <label for="font-size-range">글자 크기 <span id="font-size-value">125%</span></label>
+                    <input type="range" id="font-size-range" min="100" max="150" step="5" value="125">
+                </div>
+                <div class="settings-row">
+                    <label for="line-height-range">줄 간격 <span id="line-height-value">195%</span></label>
+                    <input type="range" id="line-height-range" min="160" max="220" step="5" value="195">
+                </div>
+                <div class="settings-row between">
+                    <span>다크 테마</span>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </aside>
 
         <!-- 현대적인 완료 모달 -->
         <div class="modern-modal" id="completion-modal">

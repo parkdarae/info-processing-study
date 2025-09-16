@@ -545,30 +545,29 @@ function showResult(isCorrect, question) {
     } else {
         resultIcon.innerHTML = '<i class="fas fa-times-circle"></i>';
         resultText.innerHTML = '<h3>틀렸습니다 😅</h3><p>다시 한번 도전해보세요!</p>';
-        
-        // 정답 표시
-        if (question.answer && question.answer.length > 0) {
-            correctAnswers.innerHTML = `
-                <div class="correct-answer-display">
-                    <h4>정답:</h4>
-                    <ul>
-                        ${question.answer.slice(0, 3).map(ans => `<li>${ans}</li>`).join('')}
-                    </ul>
-                </div>
-            `;
-        }
+    }
+
+    // 정답 예시는 정오 여부와 관계없이 항상 표시
+    if (question.answer && Array.isArray(question.answer) && question.answer.length > 0) {
+        correctAnswers.innerHTML = `
+            <div class="correct-answer-display">
+                <h4>정답 예시</h4>
+                <ul>
+                    ${question.answer.slice(0, 5).map(ans => `<li>${ans}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+    } else {
+        correctAnswers.innerHTML = '';
     }
 
     // 해설 준비
     const explanationSection = document.getElementById('explanation-section');
     const explanationText = document.getElementById('explanation-text');
     if (explanationSection && explanationText) {
-        if (question.explanation && String(question.explanation).trim()) {
-            explanationText.textContent = question.explanation;
-            explanationSection.style.display = 'block';
-        } else {
-            explanationSection.style.display = 'none';
-        }
+        const exp = (question.explanation || '').toString().trim();
+        explanationText.textContent = exp && exp.length > 0 ? exp : '해설이 준비 중입니다.';
+        explanationSection.style.display = 'block';
     }
 }
 

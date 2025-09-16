@@ -21,12 +21,16 @@ let currentStudySession = {
     sessionCorrect: 0,
     sessionTotal: 0,
     currentQuestion: null,
-    isAnswered: false
+    isAnswered: false,
+    selectedOptionText: null,
+    startTimeMs: 0,
+    timerId: null
 };
 
 // ===== 초기화 =====
 document.addEventListener('DOMContentLoaded', function() {
     initializeStudySession();
+    initializeReadabilityControls();
 });
 
 async function initializeStudySession() {
@@ -53,6 +57,9 @@ async function initializeStudySession() {
         
         // 모드 정보 업데이트
         updateModeInfo();
+
+        // 타이머 시작
+        startStudyTimer();
         
         console.log(`🎯 학습 시작: ${currentStudySession.mode} 모드, ${currentStudySession.questionQueue.length}문제`);
         
@@ -281,6 +288,9 @@ function updateQuestionDisplay(question) {
         imagesContainer.style.display = 'none';
     }
 
+    // 선택지 표시
+    renderOptions(question);
+
     // 복수 답안 처리
     setupAnswerInputs(question);
 }
@@ -349,6 +359,9 @@ function updateProgressDisplay() {
         : 0;
     const accEl = document.getElementById('session-accuracy');
     if (accEl) accEl.textContent = `${accuracy}%`;
+
+    // 원형 진행률 갱신
+    updateProgressRing(percentage);
 }
 
 function updateModeInfo() {
@@ -418,6 +431,10 @@ function collectUserAnswers() {
         const inputs = container.querySelectorAll('.answer-input, .modern-input');
         const values = Array.from(inputs).map(input => input.value.trim()).filter(answer => answer);
         if (values.length > 0) return values;
+    }
+    // 선택지 기반 답안
+    if (currentStudySession.selectedOptionText) {
+        return [currentStudySession.selectedOptionText];
     }
     const single = document.getElementById('answer-input');
     return single && single.value ? [single.value.trim()] : [];
@@ -638,6 +655,13 @@ function resetAnswerSection() {
     const expText = document.getElementById('explanation-text');
     if (expSection) expSection.style.display = 'none';
     if (expText) expText.style.display = 'none';
+
+    // 선택지 초기화
+    currentStudySession.selectedOptionText = null;
+    const optionsContainer = document.getElementById('question-options');
+    if (optionsContainer) {
+        optionsContainer.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
+    }
 }
 
 // ===== 즐겨찾기 및 해설 토글 =====
@@ -686,18 +710,17 @@ function toggleExplanation() {
 // ===== 모달 관련 =====
 function showCompletionModal() {
     const modal = document.getElementById('completion-modal');
-    const totalSolved = document.getElementById('total-solved');
-    const totalCorrect = document.getElementById('total-correct');
-    const completionRate = document.getElementById('completion-rate');
+    const accEl = document.getElementById('completion-accuracy');
+    const timeEl = document.getElementById('completion-time');
+    const scoreTile = document.getElementById('completion-score')?.parentElement;
     const easterEgg = document.getElementById('easter-egg');
 
-    totalSolved.textContent = currentStudySession.sessionTotal;
-    totalCorrect.textContent = currentStudySession.sessionCorrect;
-    
-    const rate = currentStudySession.sessionTotal > 0 
-        ? Math.round((currentStudySession.sessionCorrect / currentStudySession.sessionTotal) * 100) 
+    const rate = currentStudySession.sessionTotal > 0
+        ? Math.round((currentStudySession.sessionCorrect / currentStudySession.sessionTotal) * 100)
         : 0;
-    completionRate.textContent = `${rate}%`;
+    if (accEl) accEl.textContent = `${rate}%`;
+    if (timeEl) timeEl.textContent = formatElapsedMs(Date.now() - currentStudySession.startTimeMs);
+    if (scoreTile) scoreTile.style.display = 'none'; // 점수 규칙 미정: 노출 숨김
 
     // 이스터에그: 130문제 완주 체크
     const totalStudiedEver = userData.studiedQuestions.size;
@@ -705,11 +728,12 @@ function showCompletionModal() {
         easterEgg.style.display = 'block';
     }
 
-    modal.style.display = 'block';
+    if (currentStudySession.timerId) clearInterval(currentStudySession.timerId);
+    modal.classList.add('open');
 }
 
 function closeCompletionModal() {
-    document.getElementById('completion-modal').style.display = 'none';
+    document.getElementById('completion-modal').classList.remove('open');
 }
 
 function showAnswerListModal(type) {
@@ -830,4 +854,147 @@ function showNotification(message, type = 'info') {
         notification.style.animation = 'slideOutRight 0.3s ease forwards';
         setTimeout(() => notification.remove(), 300);
     }, 3000);
+}
+
+// ===== UI 보조 함수들 =====
+function renderOptions(question) {
+    const optionsContainer = document.getElementById('question-options');
+    if (!optionsContainer) return;
+
+    if (Array.isArray(question.options) && question.options.length > 0) {
+        // 선택지 버튼 렌더
+        const labels = ['A','B','C','D','E','F'];
+        optionsContainer.style.display = 'grid';
+        optionsContainer.innerHTML = question.options.map((opt, idx) => `
+            <button class="option-btn" data-value="${opt}">
+                <span class="option-label">${labels[idx] || idx + 1}</span>
+                <span class="option-text">${opt}</span>
+            </button>
+        `).join('');
+
+        // 이벤트 바인딩
+        optionsContainer.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                optionsContainer.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                currentStudySession.selectedOptionText = btn.dataset.value || btn.textContent.trim();
+                // 입력 박스에도 반영
+                const single = document.getElementById('answer-input');
+                if (single) single.value = currentStudySession.selectedOptionText;
+            });
+        });
+    } else {
+        optionsContainer.style.display = 'none';
+        optionsContainer.innerHTML = '';
+    }
+}
+
+function updateProgressRing(percentage) {
+    const circle = document.getElementById('progress-circle');
+    if (!circle) return;
+    const radius = circle.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    const offset = circumference - (percentage / 100) * circumference;
+    circle.style.strokeDashoffset = `${offset}`;
+}
+
+// ===== 가독성 스위처 & 테마 =====
+function initializeReadabilityControls() {
+    const openBtn = document.getElementById('settings-fab');
+    const panel = document.getElementById('settings-panel');
+    const closeBtn = document.getElementById('settings-close');
+    const fontRange = document.getElementById('font-size-range');
+    const fontValue = document.getElementById('font-size-value');
+    const lineRange = document.getElementById('line-height-range');
+    const lineValue = document.getElementById('line-height-value');
+    const themeToggle = document.getElementById('theme-toggle');
+
+    if (!openBtn || !panel) return;
+
+    // 저장된 설정 불러오기
+    try {
+        const saved = JSON.parse(localStorage.getItem('studyReadabilitySettings') || '{}');
+        if (saved.font) {
+            document.documentElement.style.setProperty('--question-font-size', saved.font + '%');
+            fontRange.value = parseInt(saved.font, 10);
+            fontValue.textContent = `${saved.font}%`;
+        }
+        if (saved.line) {
+            const lh = (parseInt(saved.line, 10) / 100).toFixed(2);
+            document.documentElement.style.setProperty('--question-line-height', lh);
+            lineRange.value = parseInt(saved.line, 10);
+            lineValue.textContent = `${saved.line}%`;
+        }
+        if (saved.theme === 'dark') {
+            document.body.classList.add('theme-dark');
+            themeToggle.checked = true;
+        }
+    } catch(_) {}
+
+    const open = () => panel.classList.add('open');
+    const close = () => panel.classList.remove('open');
+    openBtn.addEventListener('click', open);
+    if (closeBtn) closeBtn.addEventListener('click', close);
+
+    // 외부 클릭 닫기
+    document.addEventListener('click', (e) => {
+        if (!panel.contains(e.target) && e.target !== openBtn && panel.classList.contains('open')) {
+            close();
+        }
+    });
+
+    const save = (data) => {
+        const current = JSON.parse(localStorage.getItem('studyReadabilitySettings') || '{}');
+        localStorage.setItem('studyReadabilitySettings', JSON.stringify({ ...current, ...data }));
+    };
+
+    // 글자 크기
+    if (fontRange && fontValue) {
+        const applyFont = (val) => {
+            document.documentElement.style.setProperty('--question-font-size', `${val}%`);
+            fontValue.textContent = `${val}%`;
+            save({ font: String(val) });
+        };
+        fontRange.addEventListener('input', (e) => applyFont(e.target.value));
+    }
+
+    // 줄 간격
+    if (lineRange && lineValue) {
+        const applyLine = (val) => {
+            const computed = (parseInt(val, 10) / 100).toFixed(2);
+            document.documentElement.style.setProperty('--question-line-height', computed);
+            lineValue.textContent = `${val}%`;
+            save({ line: String(val) });
+        };
+        lineRange.addEventListener('input', (e) => applyLine(e.target.value));
+    }
+
+    // 테마 토글
+    if (themeToggle) {
+        themeToggle.addEventListener('change', (e) => {
+            const dark = e.target.checked;
+            document.body.classList.toggle('theme-dark', dark);
+            save({ theme: dark ? 'dark' : 'light' });
+        });
+    }
+}
+
+// ===== 타이머 =====
+function startStudyTimer() {
+    currentStudySession.startTimeMs = Date.now();
+    const el = document.getElementById('study-time');
+    if (currentStudySession.timerId) clearInterval(currentStudySession.timerId);
+    currentStudySession.timerId = setInterval(() => {
+        if (!el) return;
+        const elapsed = Date.now() - currentStudySession.startTimeMs;
+        el.textContent = formatElapsedMs(elapsed);
+    }, 1000);
+}
+
+function formatElapsedMs(ms) {
+    const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+    const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+    const seconds = String(totalSeconds % 60).padStart(2, '0');
+    return `${minutes}:${seconds}`;
 }

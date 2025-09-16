@@ -1271,9 +1271,7 @@
         "베리피케이션"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_25_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1287,9 +1285,7 @@
         "밸리데이션"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_25_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1304,9 +1300,7 @@
         "수정 비용"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_25_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1321,9 +1315,7 @@
         "McCabe Complexity"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_26_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1338,9 +1330,7 @@
         "구조 개선"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_26_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1355,9 +1345,7 @@
         "모델 뷰 컨트롤러"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_26_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1372,9 +1360,7 @@
         "포함 관계"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_27_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1389,9 +1375,7 @@
         "모듈 테스트"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_27_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1406,9 +1390,7 @@
         "인티그레이션 테스트"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_27_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1423,9 +1405,7 @@
         "전체 시스템 테스트"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_28_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1440,9 +1420,7 @@
         "인수 테스트"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_28_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1457,9 +1435,7 @@
         "Performance Test"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_28_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1474,9 +1450,7 @@
         "Penetration Test"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_29_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1491,9 +1465,7 @@
         "Cross Platform Test"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_29_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1508,9 +1480,7 @@
         "UX 테스트"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_29_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1525,9 +1495,7 @@
         "연속 통합"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_30_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1542,9 +1510,7 @@
         "연속 배포"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_30_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1559,9 +1525,7 @@
         "개발운영"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_30_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1577,9 +1541,7 @@
         "컴테이너"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_31_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1593,9 +1555,7 @@
         "시엠"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_30_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1608,9 +1568,7 @@
         "데이터 타입을 변수명에 포함시키는 명명 규칙"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_31_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1623,9 +1581,7 @@
         "네트워크 상의 데이터 패킷을 도청하는 공격 기법"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_32_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1639,9 +1595,7 @@
         "주소 해석 프로토콜"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_33_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1655,9 +1609,7 @@
         "배열"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_34_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1671,9 +1623,7 @@
         "실시간 운영체제"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_35_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1686,9 +1636,7 @@
         "① Ready, ② Run, ③ Wait"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_36_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1701,9 +1649,7 @@
         "① Shortest Job First, ② First Come First Served, ③ Round Robin"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_37_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1716,9 +1662,7 @@
         "chmod u=rwx,g=rx,o=r a.txt"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_38_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1731,9 +1675,7 @@
         "①128 ②16"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_39_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1746,9 +1688,7 @@
         "16개 네트워크, 14개 호스트"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_40_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1761,9 +1701,7 @@
         "인터넷 프로토콜 버전 6"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_41_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1776,9 +1714,7 @@
         "물리적 연결과 비트 스트림 전송을 담당하는 계층"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_42_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1792,9 +1728,7 @@
         "통신 규약"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_43_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1807,9 +1741,7 @@
         "Syntax, Semantics, Timing"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_43_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1822,9 +1754,7 @@
         "인터넷 프로토콜"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1837,9 +1767,7 @@
         "①TCP ②UDP"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1853,9 +1781,7 @@
         "맥 어드레스"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1869,9 +1795,7 @@
         "통합 인증"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1885,9 +1809,7 @@
         "모바일 임시 네트워크"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1900,9 +1822,7 @@
         "Routing Information Protocol"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1916,9 +1836,7 @@
         "분산 해시 테이블"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1932,9 +1850,7 @@
         "정보보호 관리체계"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1947,9 +1863,7 @@
         "① System on Chip, ② Virtualization"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1962,9 +1876,7 @@
         "스트라이핑, 미러링, 패리티"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1977,9 +1889,7 @@
         "대량의 데이터에서 유용한 정보를 발견하는 기법"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1992,9 +1902,7 @@
         "락을 사용하여 트랜잭션이 완료될 때까지 추가적인 접근을 제한함으로써 상호 간섭을 방지하는 기법"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2008,9 +1916,7 @@
         "버전 정보 문서"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2023,9 +1929,7 @@
         "128비트, 192비트, 256비트"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2038,9 +1942,7 @@
         "탈중앙화, 무결성, 합의"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2054,9 +1956,7 @@
         "서비스형 소프트웨어"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2069,9 +1969,7 @@
         "소프트웨어 개발과 운영 간의 협업을 강화하는 방법론"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2084,9 +1982,7 @@
         "가상화 기술을 이용해 애플리케이션을 격리된 환경에서 실행하는 도구"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2099,9 +1995,7 @@
         "각 서비스가 독립적으로 개발, 배포, 확장될 수 있는 아키텍처 패턴"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2114,9 +2008,7 @@
         "마이크로서비스 아키텍처에서 여러 서비스에 대한 단일 진입점 역할"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2129,9 +2021,7 @@
         "REST API의 대안으로 더 효율적인 데이터 페칭을 가능하게 하는 쿼리 언어"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2144,9 +2034,7 @@
         "코드 변경사항을 자동으로 빌드, 테스트, 배포하는 자동화된 프로세스"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2159,9 +2047,7 @@
         "AI는 더 넓은 개념이고 ML은 AI를 구현하는 방법 중 하나"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2174,9 +2060,7 @@
         "관계형 데이터베이스의 한계를 극복하기 위해 개발된 데이터베이스"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -2190,9 +2074,7 @@
         "요구사항 분석, 설계, 구현"
       ],
       "explanation": "정보처리기사 실기의 핵심 영역들을 포괄하는 개념들입니다.",
-      "images": [
-        "assets/images/page_44_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     }

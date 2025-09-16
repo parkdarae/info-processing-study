@@ -22,10 +22,7 @@
         "애자일개발방법론"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_1_img_1.png",
-        "assets/images/page_1_img_2.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -40,10 +37,7 @@
         "소프트웨어의 품질을 개선하고 개발 효율성을 높이기 위함"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_1_img_1.png",
-        "assets/images/page_1_img_2.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -59,10 +53,7 @@
         "기능 비기능"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_1_img_1.png",
-        "assets/images/page_1_img_2.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -79,10 +70,7 @@
         "클래스 다이어그램"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_1_img_1.png",
-        "assets/images/page_1_img_2.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -100,10 +88,7 @@
         "애자일개발방법론"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_1_img_1.png",
-        "assets/images/page_1_img_2.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -118,10 +103,7 @@
         "소프트웨어의 품질을 개선하고 개발 효율성을 높이기 위함"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_1_img_1.png",
-        "assets/images/page_1_img_2.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -137,10 +119,7 @@
         "기능 비기능"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_1_img_1.png",
-        "assets/images/page_1_img_2.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -157,10 +136,7 @@
         "클래스 다이어그램"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_1_img_1.png",
-        "assets/images/page_1_img_2.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -176,9 +152,7 @@
         "속성(Attribute)"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_2_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -194,9 +168,7 @@
         "C"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_2_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -212,9 +184,7 @@
         "/28"
       ],
       "explanation": "네트워크 개수 = 4(=2²) • 필요한 비트 수 = 2(호스트) 호스트 개수 = 14개 • 필요한 비트 수 = 4 • 서브넷 마스크 = /28 (255.255.255.240)",
-      "images": [
-        "assets/images/page_2_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -229,9 +199,7 @@
         "128, 16"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_2_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -245,10 +213,7 @@
         "1\n2 4\n3 6 9\n"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_2_img_1.png",
-        "assets/images/page_3_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -262,9 +227,7 @@
         "10, 8, 6, 4, 2"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_3_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -279,9 +242,7 @@
         "기본설계, 상세설계, 테스트"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_3_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -296,9 +257,7 @@
         "개체, 관계"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_3_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -313,10 +272,7 @@
         "3, 4"
       ],
       "explanation": "카디널리티는 튜플(행)의 개수이고, 차수는 속성(열)의 개수이다.",
-      "images": [
-        "assets/images/page_3_img_1.png",
-        "assets/images/page_3_img_2.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -330,10 +286,7 @@
         "① ㉡ ② ㉢ ③ ㉠ ④ ㉤ ⑤ ㉣"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_5_img_1.png",
-        "assets/images/page_5_img_2.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -348,26 +301,29 @@
         "후보키, 기본키"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_5_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
     {
       "id": 20,
-      "question": "관계대수에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 쓰시오.\n관계대수는 관계형 데이터베이스에서 원하는 정보와 그 정보를 검색하기 위해서 어떻게 유도하는가를 기술하는 절차적인 언어이다. 관계대수에 사용되는 연산은 다음과 같다.\n• 합집합(UNION)은 두 릴레이션에 존재하는 튜플의 합집합을 구하되, 결과로 생성된 릴레이션에서 중복되는 튜플은 제거되는 연산으로 사용하는 기호는 (   )①이다.\n• 차집합(DIFFERENCE)은 두 릴레이션에 존재하는 튜플의 차집합을 구하는 연산으로 사용하는 기호는 (   )②이다.\n• 곱집합(CARTESIAN PRODUCT)은 두 릴레이션에 있는 튜플들의 순서쌍을 구하는 연산으로 사용하는 기호는 (   )③이다.\n• 선택(SELECT)은 주어진 릴레이션에서 주어진 조건을 만족하는 튜플들의 부분집합을 구하는 연산으로 사용하는 기호는 (   )④이다.\n• 투영(PROJECT)은 주어진 릴레이션에서 속성 리스트에 제시된 속성 값만을 추출하는 연산으로 사용하는 기호는 (   )⑤이다.",
-      "options": [],
+      "question": "관계대수 연산의 기호를 올바르게 매칭한 것은?",
+      "options": [
+        "① 합집합: ∪, 차집합: -, 곱집합: ×, 선택: σ, 투영: π",
+        "② 합집합: ∩, 차집합: +, 곱집합: ÷, 선택: δ, 투영: ρ",
+        "③ 합집합: +, 차집합: ∪, 곱집합: -, 선택: π, 투영: σ",
+        "④ 합집합: ×, 차집합: ∪, 곱집합: ∩, 선택: ρ, 투영: δ",
+        "⑤ 합집합: -, 차집합: ×, 곱집합: ∪, 선택: π, 투영: σ"
+      ],
       "answer": [
-        "① ∪, ② -, ③ ×, ④ σ, ⑤ π",
-        "①∪ ②- ③× ④σ ⑤π",
-        "① U, ② -, ③ X, ④ 시그마, ⑤ 파이"
+        "①",
+        "1",
+        "첫번째",
+        "합집합: ∪, 차집합: -, 곱집합: ×, 선택: σ, 투영: π"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_6_img_1.png"
-      ],
-      "type": "descriptive",
+      "images": [],
+      "type": "multiple_choice",
       "category": "정보처리"
     },
     {
@@ -381,9 +337,7 @@
         "나눗셈 연산자"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_6_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -398,9 +352,7 @@
         "릴레이션 해석"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_6_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -414,9 +366,7 @@
         "삭제 이상은 테이블에서 튜플을 삭제할 때 의도와는 상관없는 값들도 함께 삭제되는 현상이다"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_7_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -430,9 +380,7 @@
         "삽입 이상(Insertion Anomaly), 삭제 이상(Deletion Anomaly), 갱신 이상(Update Anomaly)"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_7_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -450,9 +398,7 @@
         "ㄱㄴㄷ"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_7_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -467,9 +413,7 @@
         "Second Normal Form"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_8_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -484,9 +428,7 @@
         "반정규화(Denormalization)"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_8_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -500,9 +442,7 @@
         "호스트 수: 62개"
       ],
       "explanation": "호스트 비트 수가 6비트이므로 2^6 = 64개의 주소가 가능하지만, 네트워크 주소와 브로드캐스트 주소를 제외하면 62개가 됩니다.",
-      "images": [
-        "assets/images/page_8_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -940,9 +880,7 @@
         "제이유닛"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_18_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -955,9 +893,7 @@
         "Voice Recognition, Touch, Gesture"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_18_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -971,9 +907,7 @@
         "사용성"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_19_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -987,9 +921,7 @@
         "① User Experience, ② User Interface"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_19_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1002,9 +934,7 @@
         "같은 테스트를 반복하면 더 이상 새로운 결함을 발견할 수 없다"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_20_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1018,9 +948,7 @@
         "구조 기반 테스트"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_20_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -1037,9 +965,7 @@
         "ㄱㄴㄷ"
       ],
       "explanation": "",
-      "images": [
-        "assets/images/page_20_img_1.png"
-      ],
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },

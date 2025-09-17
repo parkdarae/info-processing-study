@@ -2,7 +2,7 @@
   "version": "3.0.0",
   "title": "정보처리기사실기_키워드찾기_130문제",
   "description": "정보처리기사 실기 문제은행 - 130문제 완전 완성판!",
-  "total_questions": 134,
+  "total_questions": 130,
   "created_at": "2025-09-13",
   "parsing_accuracy": "100%",
   "extraction_method": "MANUAL_PERFECT",
@@ -75,84 +75,21 @@
       "category": "정보처리"
     },
     {
-      "id": 5,
-      "question": "시제품을 끊임없이 제작하며 사이클을 반복하는 개발 방법론으로 워터폴과 대조적이며, 소프트웨어 개발을 넘어 기업 경영 전반에서 사용되고 있다. 고객의 변화하는 요구사항과 환경 변화에 능동적인 이 소프트웨어 개발 방법론을 쓰시오.",
-      "options": [],
-      "answer": [
-        "애자일",
-        "Agile",
-        "AGILE",
-        "agile",
-        "애자일(Agile)",
-        "애자일 방법론",
-        "애자일개발방법론"
-      ],
-      "explanation": "",
-      "images": [],
-      "type": "descriptive",
-      "category": "정보처리"
-    },
-    {
-      "id": 6,
-      "question": "소프트웨어 공학에서 리팩토링(Refactoring)을 하는 목적에 대해 간략히 서술하시오.",
-      "options": [],
-      "answer": [
-        "리팩토링의 목적은 프로그램을 쉽게 이해하고 수정하여 빠르게 개발할 수 있도록 하기 위함이다",
-        "프로그램을 쉽게 이해하고 수정하여 빠르게 개발할 수 있도록 하기 위함",
-        "코드의 가독성을 높이고 유지보수를 용이하게 하기 위함",
-        "소프트웨어의 품질을 개선하고 개발 효율성을 높이기 위함"
-      ],
-      "explanation": "",
-      "images": [],
-      "type": "descriptive",
-      "category": "정보처리"
-    },
-    {
       "id": 7,
-      "question": "요구사항 확인에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 쓰시오.\n• (   )① 요구사항은 시스템이 무엇을 하는지, 어떤 기능을 하는지 등 사용자가 시스템을 통해 제공받기를 원하는 기능이나 시스템이 반드시 수행해야 하는 기능을 의미한다.\n• (   )② 요구사항은 품질이나 제약사항과 관련된 요구사항으로, 시스템의 장비 구성, 성능, 인터페이스, 테스트, 보안 등의 요구사항을 말한다.",
+      "question": "다음 UML 클래스 다이어그램을 보고 Order 클래스와 Security 클래스 간의 관계를 나타내는 용어를 쓰시오.\n\n• Order 클래스에서 Security 클래스로 향하는 점선 화살표에 <<import>> 스테레오타입이 표시되어 있다.\n• Security 클래스는 +Credentials와 +MDSCrypt 메서드를 포함하고 있다.",
       "options": [],
       "answer": [
-        "① 기능, ② 비기능",
-        "①기능 ②비기능",
-        "① 기능 ② 비기능",
-        "기능, 비기능",
-        "기능 비기능"
+        "의존 관계",
+        "Dependency",
+        "의존성",
+        "Import",
+        "임포트",
+        "의존"
       ],
-      "explanation": "",
-      "images": [],
-      "type": "descriptive",
-      "category": "정보처리"
-    },
-    {
-      "id": 8,
-      "question": "UML(Unified Modeling Language)에 관한 다음 설명에서 괄호에 공통으로 들어갈 알맞은 용어를 쓰시오.\n(   ) 다이어그램은 UML 다이어그램 중 객체(Object)들을 (   )로 추상화하여 표현하는 다이어그램으로 대표적인 구조적 다이어그램이다. (   )는 각각의 객체들이 갖는 속성과 메소드를 표현한 것으로 3개의 구획으로 나눠 이름, 속성, 메소드를 표기한다.",
-      "options": [],
-      "answer": [
-        "클래스",
-        "Class",
-        "CLASS",
-        "class",
-        "클래스(Class)",
-        "클래스 다이어그램"
+      "explanation": "UML에서 점선 화살표는 의존 관계(Dependency)를 나타내며, <<import>> 스테레오타입은 한 클래스가 다른 클래스의 기능을 가져와 사용함을 의미한다.",
+      "images": [
+        "assets/images/q7_uml_diagram.png"
       ],
-      "explanation": "",
-      "images": [],
-      "type": "descriptive",
-      "category": "정보처리"
-    },
-    {
-      "id": 9,
-      "question": "UML에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 쓰시오.\nUML은 시스템 분석, 설계, 구현 등 시스템 개발 과정에서 시스템 개발자와 고객 또는 개발자 상호 간의 의사소통이 원활하게 이루어지도록 표준화한 대표적인 객체지향 모델링 언어로, 사물, (   )①, 관계, 다이어그램으로 구성된다.",
-      "options": [],
-      "answer": [
-        "속성",
-        "Attribute",
-        "attribute",
-        "ATTRIBUTE",
-        "속성(Attribute)"
-      ],
-      "explanation": "",
-      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -205,29 +142,34 @@
     },
     {
       "id": 13,
-      "question": "다음 C언어로 구현된 프로그램을 분석하여 그 실행 결과를 쓰시오.\n\n```c\n#include<stdio.h>\nmain() {\n    int i, j;\n    for(i=1; i<=3; i++) {\n        for(j=1; j<=i; j++) {\n            printf(\"%d \", i*j);\n        }\n        printf(\"\\n\");\n    }\n}\n```",
+      "question": "다음 <회원> 테이블을 보고 카디널리티(Cardinality)와 차수(Degree)를 구하시오.",
       "options": [],
       "answer": [
-        "1\n2 4\n3 6 9",
-        "1 \\n 2 4 \\n 3 6 9",
-        "1\n2 4\n3 6 9\n"
+        "카디널리티: 5, 차수: 4",
+        "Cardinality: 5, Degree: 4",
+        "카디널리티=5, 차수=4",
+        "5, 4"
       ],
-      "explanation": "",
-      "images": [],
+      "explanation": "카디널리티는 튜플(행)의 개수이고, 차수는 속성(열)의 개수이다.",
+      "images": [
+        "assets/images/q13_member_table.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
     {
       "id": 14,
-      "question": "다음 C언어로 구현된 프로그램을 분석하여 그 실행 결과를 쓰시오.\n\n```c\n#include<stdio.h>\nmain() {\n    int i=10;\n    while(i>0) {\n        if(i%2 == 0) {\n            printf(\"%d \", i);\n        }\n        i--;\n    }\n}\n```\n입력값: -1",
+      "question": "다음 E-R 다이어그램을 보고 professor와 student 개체 간의 관계에서 각 기호가 나타내는 의미를 쓰시오.\n\n• (a): professor 개체의 참여도\n• (b): student 개체의 참여도\n• (c): professor에서 advisor 관계로의 대응수\n• (d): student에서 advisor 관계로의 대응수\n• (e): advisor 관계의 속성",
       "options": [],
       "answer": [
-        "10 8 6 4 2",
-        "10 8 6 4 2 ",
-        "10, 8, 6, 4, 2"
+        "a: 부분참여, b: 전체참여, c: 1, d: N, e: data",
+        "(a)부분참여 (b)전체참여 (c)1 (d)N (e)data",
+        "부분참여, 전체참여, 1, N, data"
       ],
-      "explanation": "",
-      "images": [],
+      "explanation": "E-R 다이어그램에서 단선은 부분참여, 이중선은 전체참여를 나타내며, 1:N 관계에서 professor는 1, student는 N의 대응수를 가진다.",
+      "images": [
+        "assets/images/q14_er_diagram.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -332,31 +274,39 @@
     },
     {
       "id": 21,
-      "question": "관계대수의 나눗셈(÷) 연산에 대한 설명에서 빈 곳에 들어갈 기호를 쓰시오.\n인증성, 기밀성, 데이터 무결성의 지원으로 보안 문제를 해결할 수 있다. • (   )은 관계 데이터의 연산을 표현하는 방법으로 관계 데이터 모델의 제안자인 코드가 제안한 것으로 원하는 정보가 무엇인지만 정의하는 비절차적 특성을 가진다.",
+      "question": "다음 테이블 <R>에서 함수적 종속성에 대한 설명의 빈 곳에 들어갈 알맞은 용어를 보기에서 찾아 쓰시오.\n\n<보기>\nㄱ(㉠): Multi Valued\nㄴ(㉡): Transitive  \nㄷ(㉢): Full\nㄹ(㉣): Hybrid\nㅁ(㉤): Natural\nㅂ(㉥): Defined\nㅅ(㉦): Relational\nㅇ(㉧): Partial\n\n• 테이블 <R>에서 '성적'을 기본키인 {학생, 학과}에 대해 (①) Functional Dependency이다.\n• 테이블 <R>에서 '학년'을 기본키인 {학생, 학과} 중 '학생'만으로 식별이 가능하므로 기본키에 대해 (②) Functional Dependency이다.\n• 임의의 테이블에 속성 A, B, C가 있을 때, A → B이고 B → C일 때 A → C인 관계는 (③) Functional Dependency이다.",
       "options": [],
       "answer": [
-        "÷",
-        "나눗셈",
-        "Division",
-        "나눗셈 연산자"
+        "① ㉧, ② ㉢, ③ ㉡",
+        "①㉧ ②㉢ ③㉡",
+        "① ㅇ, ② ㄷ, ③ ㄴ",
+        "①ㅇ ②ㄷ ③ㄴ",
+        "ㅇ, ㄷ, ㄴ",
+        "ㅇㄷㄴ",
+        "Partial, Full, Transitive"
       ],
-      "explanation": "",
-      "images": [],
+      "explanation": "부분 함수적 종속(Partial)은 기본키의 일부로 결정되는 경우, 완전 함수적 종속(Full)은 기본키 전체로 결정되는 경우, 이행적 함수적 종속(Transitive)은 A→B, B→C일 때 A→C가 성립하는 경우이다.",
+      "images": [
+        "assets/images/q21_functional_dependency.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
     {
       "id": 22,
-      "question": "다음 설명에서 괄호에 들어갈 알맞은 용어를 쓰시오.\n• (   )은 관계 데이터의 연산을 표현하는 방법으로 관계 데이터 모델의 제안자인 코드가 제안한 것으로 원하는 정보가 무엇인지만 정의하는 비절차적 특성을 가진다.",
+      "question": "다음 정규화 과정을 보고 괄호에 들어갈 알맞은 용어를 쓰시오.\n\n테이블을 만들 때는 이상(Anomaly)을 방지하기 위해 데이터들의 중복성 및 종속성을 배제하는 정규화를 수행한다. 아래 그림은 부분 함수적 종속을 제거하여 제(①)정규형을 만드는 과정이다.\n\n<Table R>의 경우 C는 key에 해당하는 A와 B 중 A에만 종속되는 부분 함수적 종속이다. 이 문제 해결을 위해 <Table R>에서 C를 분리하여 <Table R1>과 <Table R2>로 만들면 제(②)정규형에 해당하는 테이블이 완성된다.",
       "options": [],
       "answer": [
-        "관계해석",
-        "Relational Calculus",
-        "관계해석(Relational Calculus)",
-        "릴레이션 해석"
+        "① 1, ② 2",
+        "①1 ②2",
+        "① 제1정규형, ② 제2정규형",
+        "1NF, 2NF",
+        "첫번째, 두번째"
       ],
-      "explanation": "",
-      "images": [],
+      "explanation": "부분 함수적 종속이 존재하는 테이블은 제1정규형이며, 이를 제거하면 제2정규형이 된다.",
+      "images": [
+        "assets/images/q22_normalization.png"
+      ],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -536,35 +486,34 @@
     },
     {
       "id": 34,
-      "question": "다음 DB 복구 기법에 대한 설명에서 괄호에 들어갈 알맞은 용어를 쓰시오.\n(   )는 데이터베이스에 치명적인 손실이 발생했을 때 이를 복구하기 위해 데이터베이스를 주기적으로 백업한 파일과 로그 파일을 이용하여 장애가 발생하기 이전 상태로 복원시키는 작업이다.",
+      "question": "다음 모델링에 대한 설명에서 괄호에 들어갈 알맞은 용어를 보기에서 찾아 기호로 쓰시오.\n\n① 다수의 프로세스들 간의 자료 흐름을 중심으로 처리 과정을 표현한 모델링 [ ] 예: (DFD) 자료흐름도\n② 시간의 흐름에 따른 객체들 간의 제어 흐름, 상호 작용, 동작 순서 등의 동적인 행위를 표현하는 모델링 [ ] 예: 상태 변화도(STD), 사건 추적도\n③ 시스템에서 요구되는 객체를 찾아내어 속성과 연산 식별 및 객체들 간의 관계를 규정하여 표시하는 모델링 [ ] 예: ER(ERD)\n\n<보기>\n㉠ Sequence Operation ㉡ Information ㉢ Transaction ㉣ \n㉤ I/O Function ㉥ Dynamic ㉦ Cause-Effect",
       "options": [],
       "answer": [
-        "롤포워드",
-        "Roll Forward",
-        "순방향 복구",
-        "롤포워드(Roll Forward)"
+        "① ㉡, ② ㉥, ③ ㉠",
+        "①㉡ ②㉥ ③㉠",
+        "① Information, ② Dynamic, ③ Sequence Operation",
+        "① ㄴ, ② ㅁ, ③ ㄱ",
+        "①ㄴ ②ㅁ ③ㄱ",
+        "ㄴ, ㅁ, ㄱ",
+        "ㄴㅁㄱ"
       ],
-      "explanation": "",
-      "images": [
-        "assets/images/page_10_img_1.png"
-      ],
+      "explanation": "정보 모델링(Information Modeling), 동적 모델링(Dynamic Modeling), 순차적 운영 모델링(Sequence Operation Modeling)에 대한 설명입니다.",
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
     {
       "id": 35,
-      "question": "SQL의 분류에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 쓰시오.\n• DDL(Data Definition Language): 스키마, 도메인, 테이블, 뷰, 인덱스를 정의하거나 변경 또는 삭제할 때 사용하는 언어\n• (   )①: 데이터를 실제로 조작하는 데 사용하는 언어\n• (   )②: 데이터의 보안, 무결성, 회복, 병행 수행 제어 등을 정의하는 데 사용하는 언어",
+      "question": "다음 설명에 해당하는 객체지향 설계 원칙을 보기에서 찾아 쓰시오.\n\n• 자신이 사용하지 않는 인터페이스와 의존 관계를 맺거나 영향을 받지 않아야 한다는 객체지향 설계 원칙 중의 하나이다.\n• 예를 들어 프린터, 팩스, 복사 기능을 가진 복합기의 경우 3가지 기능을 모두 가진 범용 인터페이스보다는 프린터 인터페이스, 팩스 인터페이스, 복사 인터페이스로 분리함으로써 하나의 기능 변경으로 인해 다른 기능이 영향을 받지 않도록 해야 한다.\n\n<보기>\n• SOLID: SRP • OCP • LSP • ISP • DIP\n• PNP",
       "options": [],
       "answer": [
-        "① DML, ② DCL",
-        "①DML ②DCL",
-        "① Data Manipulation Language, ② Data Control Language",
-        "DML, DCL"
+        "ISP",
+        "Interface Segregation Principle",
+        "인터페이스 분리 원칙",
+        "인터페이스 분리"
       ],
-      "explanation": "",
-      "images": [
-        "assets/images/page_11_img_1.png"
-      ],
+      "explanation": "ISP(Interface Segregation Principle)는 인터페이스 분리 원칙으로, 클라이언트는 자신이 사용하지 않는 메소드에 의존하지 않아야 한다는 원칙입니다.",
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -586,17 +535,19 @@
     },
     {
       "id": 37,
-      "question": "웹 서비스(Web Service)에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 쓰시오.\n웹 서비스와 관련된 서식이나 프로토콜 등을 표준적인 방법으로 기술하고 게시하기 위한 언어로, 웹 서비스명, 수행 가능한 오퍼레이션명, 입력 및 출력 메시지 포맷, 프로토콜 정보 등이 기술된다.",
+      "question": "모듈 간의 결합도(Coupling)에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 보기에서 찾아 기호로 쓰시오.\n\n1. (   )① 는 모듈 간의 인터페이스로 데이터, 지역 변수 등을 직접 참조하거나 수정할 때의 결합도다.\n2. (   )② 는 모듈 간의 인터페이스로 배열이나 레코드 등의 자료 구조가 전달될 때의 결합도다.\n3. (   )③ 는 모듈 간의 인터페이스로 파라미터가 아닌 모듈 밖에 선언된 전역 변수를 사용하여 전역 변수를 갱신하는 방식으로 상호작용하는 때의 결합도다.\n\n<보기>\n㉠ 스탬프 결합도 ㉡ 자료 결합도 ㉢ 제어 결합도 ㉣ 공통 결합도\n㉤ 외부 결합도",
       "options": [],
       "answer": [
-        "WSDL",
-        "Web Services Description Language",
-        "웹 서비스 기술 언어"
+        "① ㉤, ② ㉠, ③ ㉣",
+        "①㉤ ②㉠ ③㉣",
+        "① 외부 결합도, ② 스탬프 결합도, ③ 공통 결합도",
+        "① ㅁ, ② ㄱ, ③ ㄹ",
+        "①ㅁ ②ㄱ ③ㄹ",
+        "ㅁ, ㄱ, ㄹ",
+        "ㅁㄱㄹ"
       ],
-      "explanation": "",
-      "images": [
-        "assets/images/page_11_img_1.png"
-      ],
+      "explanation": "외부 결합도(External Coupling), 스탬프 결합도(Stamp Coupling), 공통 결합도(Common Coupling)에 대한 설명입니다.",
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -622,17 +573,19 @@
     },
     {
       "id": 39,
-      "question": "다음 설명에 해당하는 소프트웨어 설계 원칙을 보기에서 찾아 쓰시오.\n<보기>\n단일 책임 원칙, 개방-폐쇄 원칙, 리스코프 치환 원칙, 인터페이스 분리 원칙, 의존관계 역전 원칙\n\n자신이 사용하지 않는 인터페이스와 의존 관계를 맺거나 영향을 받지 않아야 한다는 원칙이다.",
+      "question": "모듈의 응집도(Cohesion)에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 보기에서 찾아 기호로 쓰시오.\n\n① 내부의 요소들이 기능적으로 연관성은 없으나 순차적으로 실행될 때의 응집도\n② 서로 다른 기능을 수행하지만 동일한 입력과 출력을 사용할 때의 응집도\n③ 하나의 기능에 밀접하게 관련되어 있거나 연관되어 있을 때의 응집도\n\n<보기>\n㉠ 순차적 응집도 ㉡ 기능적 응집도 ㉢ 교환적 응집도 ㉣ 절차적 응집도\n㉤ 논리적 응집도 ㉥ 시간적 응집도 ㉦ 우연적 응집도",
       "options": [],
       "answer": [
-        "인터페이스 분리 원칙",
-        "Interface Segregation Principle",
-        "ISP"
+        "① ㉣, ② ㉢, ③ ㉡",
+        "①㉣ ②㉢ ③㉡",
+        "① 절차적 응집도, ② 교환적 응집도, ③ 기능적 응집도",
+        "① ㄹ, ② ㄷ, ③ ㄴ",
+        "①ㄹ ②ㄷ ③ㄴ",
+        "ㄹ, ㄷ, ㄴ",
+        "ㄹㄷㄴ"
       ],
-      "explanation": "",
-      "images": [
-        "assets/images/page_12_img_1.png"
-      ],
+      "explanation": "절차적 응집도(Procedural Cohesion), 교환적 응집도(Communicational Cohesion), 기능적 응집도(Functional Cohesion)에 대한 설명입니다.",
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -669,51 +622,43 @@
     },
     {
       "id": 42,
-      "question": "소스 코드는 향후 관리를 고려하여 모듈화하여 패키징한다. 모듈화는 모듈 간 (   )의 최소화와 모듈 내 (   )의 최대화를 통해 수행한다. 괄호에 들어갈 알맞은 용어를 쓰시오.",
+      "question": "테스트 케이스의 구성 요소를 보기에서 찾아 쓰시오.\n\n• 식별자_ID\n• 테스트 항목\n• (   )\n• (   )\n• 환경 설정\n• 특수 절차 요구\n• 의존성 기술\n\n<보기>\n• 의존성 여부 • 요구 절차 • 테스트 데이터 • 테스트 조건\n• 예상 결과 • 하드웨어 환경 • 소프트웨어 환경 • 성공/실패 기준",
       "options": [],
       "answer": [
-        "결합도, 응집도",
-        "Coupling, Cohesion",
-        "결합도(Coupling), 응집도(Cohesion)"
+        "입력명세, 출력명세",
+        "입력명세(Input Specification), 출력명세(Output Specification)",
+        "Input Specification, Output Specification"
       ],
-      "explanation": "",
-      "images": [
-        "assets/images/page_13_img_1.png"
-      ],
+      "explanation": "테스트 케이스는 식별자, 테스트 항목, 입력명세, 출력명세, 환경설정, 특수절차요구, 의존성기술로 구성됩니다.",
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
     {
       "id": 43,
-      "question": "모듈의 응집도(Cohesion)에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 보기에서 찾아 기호로 쓰시오.\n<보기>\n㉠ 기능적 ㉡ 순서적 ㉢ 교환적 ㉣ 절차적 ㉤ 시간적 ㉥ 논리적 ㉦ 우연적\n\n모듈 내부의 요소들이 단일한 기능을 수행하는 데 필요한 요소들로만 구성된 경우",
+      "question": "GoF(Gang of Four) 디자인 패턴 중 다음 설명에 해당하는 패턴을 보기에서 찾아 쓰시오.\n\n(   ) 패턴은 객체 생성을 서브 클래스에서 처리하도록 분리하여 캐슐화한 패턴으로, 상위 클래스에서 인터페이스만 정의하고 실제 생성은 서브 클래스가 담당한다. 다른 이름으로 가상 생성자(Virtual Constructor) 패턴이라고도 불린다.\n\n<보기>\n• Abstract Factory • Singleton • Factory Method • Prototype\n• Composite • Facade • Template Method • Builder",
       "options": [],
       "answer": [
-        "㉠",
-        "기능적",
-        "기능적 응집도",
-        "Functional Cohesion"
+        "Factory Method",
+        "팩토리 메소드",
+        "Factory Method Pattern"
       ],
-      "explanation": "",
-      "images": [
-        "assets/images/page_13_img_1.png"
-      ],
+      "explanation": "Factory Method 패턴은 객체 생성을 서브클래스에 위임하는 생성 패턴입니다.",
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
     {
       "id": 44,
-      "question": "다음 모듈의 구조도를 참고하여 모듈 F의 팬인(Fan-In)과 팬아웃(Fan-Out)을 구하시오.",
+      "question": "GoF 디자인 패턴에 대한 다음 설명에서 괄호에 들어갈 알맞은 패턴을 보기에서 찾아 쓰시오.\n\n• (   )① 패턴은 구현부에서 추상층을 분리하여 서로가 독립적으로 확장할 수 있도록 구성한 패턴으로, 기능과 구현을 두 개의 별도 클래스로 구현한다는 특징이 있다.\n• (   )② 패턴은 한 객체의 상태가 변화하면 객체에 상속된 다른 객체들에게 변화된 상태를 전달하는 패턴으로 일대다의 의존성을 정의한다. 주로 분산된 시스템 간에 이벤트를 생성/발행(Publish)하고 이를 수신(Subscribe)해야 할 때 이용한다.\n\n<보기>\n• Factory Method • Builder • Adapter • Bridge • Facade\n• Observer • Proxy • Mediator",
       "options": [],
       "answer": [
-        "팬인: 2, 팬아웃: 3",
-        "Fan-In: 2, Fan-Out: 3",
-        "팬인=2, 팬아웃=3"
+        "① Bridge, ② Observer",
+        "①브리지 ②옵저버",
+        "① Bridge Pattern, ② Observer Pattern"
       ],
-      "explanation": "팬인은 해당 모듈로 들어오는 화살표의 수, 팬아웃은 해당 모듈에서 나가는 화살표의 수입니다.",
-      "images": [
-        "assets/images/page_13_img_1.png",
-        "assets/images/page_13_img_2.png"
-      ],
+      "explanation": "Bridge 패턴은 추상화와 구현을 분리하고, Observer 패턴은 일대다 의존성을 정의하는 패턴입니다.",
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -750,33 +695,30 @@
     },
     {
       "id": 47,
-      "question": "GoF(Gang of Four) 디자인 패턴 중 다음 설명에 해당하는 패턴을 보기에서 찾아 쓰시오.\n<보기>\nSingleton, Factory Method, Abstract Factory, Builder, Prototype\n\n(   ) 패턴은 객체 생성을 서브 클래스에서 처리하도록 분리하여 캡슐화한 패턴으로, 상위 클래스에서 인터페이스만 정의하고 실제 생성은 서브 클래스가 담당한다.",
+      "question": "EAI(Enterprise Application Integration)는 기업 내 각종 애플리케이션 및 플랫폼 간의 정보 전달, 연계, 통합 등 상호 연동이 가능하게 해주는 솔루션이다. 비즈니스 간 통합 및 연계성을 증대시켜 효율성 및 각 시스템 간의 확정성(Determinacy)을 높여 준다. EAI의 구축 유형은 다음과 같다.",
       "options": [],
       "answer": [
-        "Factory Method",
-        "팩토리 메소드",
-        "Factory Method Pattern"
+        "Point-to-Point, Hub & Spoke, Message Bus, Hybrid",
+        "포인트 투 포인트, 허브 앤 스포크, 메시지 버스, 하이브리드"
       ],
-      "explanation": "",
+      "explanation": "EAI의 4가지 구축 유형: Point-to-Point, Hub & Spoke, Message Bus, Hybrid",
       "images": [
-        "assets/images/page_14_img_1.png"
+        "assets/images/q47_eai_types.png"
       ],
       "type": "descriptive",
       "category": "정보처리"
     },
     {
       "id": 48,
-      "question": "GoF 디자인 패턴에 대한 다음 설명에서 괄호에 들어갈 알맞은 패턴을 보기에서 찾아 쓰시오.\n<보기>\nBridge, Adapter, Composite, Decorator, Facade, Flyweight, Proxy\n\n• (   )① 패턴은 구현부에서 추상층을 분리하여 서로가 독립적으로 확장할 수 있도록 구성한 패턴이다.\n• (   )② 패턴은 한 클래스의 인터페이스를 다른 클래스에서 이용할 수 있도록 변환해 주는 패턴이다.",
+      "question": "(   )은 속성-값 쌍(Attribute-Value Pairs)으로 이루어진 데이터 객체를 전달하기 위해 사람이 읽을 수 있는 텍스트를 사용하는 개방형 표준 포맷이다. 비동기 처리에 사용되는 AJAX에서 XML을 대체하여 사용되고 있다. 다음은 (   )이 가질 수 있는 자료 기본형이다.\n\n• 숫자: 정수와 실수를 표현한다.\n• 문자열: 유니코드 문자로 표현하며, 큰따옴표(\"\")로 묶는다.\n• 참/거짓: 참(True) 또는 거짓(False)을 표현한다.\n• 배열: 다양한 요소들을 쉼표로 구분하여 표현하며, 대괄호([ ])로 묶는다.\n• 객체: 이름/값 쌍으로 표현하며, 중괄호({ })로 묶는다.\n• NULL: 아직 알려지지 않거나 모르는 값을 표현하기 위한 자료형이다.",
       "options": [],
       "answer": [
-        "① Bridge, ② Adapter",
-        "①브릿지 ②어댑터",
-        "① Bridge Pattern, ② Adapter Pattern"
+        "JSON",
+        "JavaScript Object Notation",
+        "제이슨"
       ],
-      "explanation": "",
-      "images": [
-        "assets/images/page_15_img_1.png"
-      ],
+      "explanation": "JSON은 경량의 데이터 교환 포맷으로, 사람이 읽기 쉬우며 기계가 분석하고 생성하기도 쉬운 형식입니다.",
+      "images": [],
       "type": "descriptive",
       "category": "정보처리"
     },
@@ -814,11 +756,12 @@
     },
     {
       "id": 51,
-      "question": "소프트웨어 아키텍처 4+1 뷰에서 논리 뷰(Logical View)에 대해 간략히 서술하시오.",
+      "question": "Kent Beck과 Erich Gamma 등이 개발한 자바 프로그래밍 언어용 유닛 테스트 프레임워크로 xUnit 계열의 한 종류다. 같은 테스트 코드를 여러 번 작성하지 않게 도와주며, 테스트마다 예상 결과를 기억할 필요가 없는 자동화된 해법을 제공한다는 특징이 있다.",
       "options": [],
       "answer": [
-        "시스템의 기능적 요구사항이 어떻게 제공되는지를 보여주는 뷰",
-        "논리 뷰는 최종 사용자 관점에서 시스템의 기능을 보여주는 뷰이다"
+        "JUnit",
+        "제이유닛",
+        "J-Unit"
       ],
       "explanation": "",
       "images": [
@@ -829,12 +772,12 @@
     },
     {
       "id": 52,
-      "question": "소프트웨어 아키텍처의 품질 속성 중 다음 설명에 해당하는 것을 쓰시오.\n시스템이 장애 없이 성공적으로 실행되는 확률",
+      "question": "사용자의 자연스러운 움직임을 통해 시스템과 상호작용하는 사용자 인터페이스(UI)로, 키보드나 마우스와 같이 조작을 배워야 하는 인공 제어 장치를 사용하는 인터페이스와 구분하기 위해 '자연스러운'이라는 표현을 사용한다. 시리(Siri), 빅스비(Bixby) 등과 같은 음성 비서에게 사용하는 자연어 명령이나 휴대폰이나 태블릿에서의 터치 등이 여기에 해당한다.",
       "options": [],
       "answer": [
-        "신뢰성",
-        "Reliability",
-        "신뢰성(Reliability)"
+        "NUI",
+        "Natural User Interface",
+        "자연 사용자 인터페이스"
       ],
       "explanation": "",
       "images": [
@@ -875,11 +818,12 @@
     },
     {
       "id": 55,
-      "question": "Kent Beck과 Erich Gamma 등이 개발한 자바 프로그래밍 언어용 유닛 테스트 프레임워크로 Annotation을 사용하여 간결하게 지원하는 이 프레임워크의 이름을 쓰시오.",
+      "question": "UI 설계 원칙에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 쓰시오.\n\n• 직관성: 누구나 쉽게 이해하고 사용할 수 있어야 한다.\n• (   ): 사용자의 목적을 정확하고 완벽하게 달성해야 한다.\n• 학습성: 누구나 쉽게 배우고 익힐 수 있어야 한다.\n• 유연성: 사용자의 요구사항을 최대한 수용하고 실수를 최소화해야 한다.",
       "options": [],
       "answer": [
-        "JUnit",
-        "제이유닛"
+        "유효성",
+        "Effectiveness",
+        "효과성"
       ],
       "explanation": "",
       "images": [],
@@ -888,11 +832,12 @@
     },
     {
       "id": 56,
-      "question": "NUI(Natural User Interface)에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 쓰시오.\n사용자의 자연스러운 움직임을 통해 시스템과 상호작용하는 사용자 인터페이스로 (   ), (   ), (   ) 등이 있다.",
+      "question": "UX와 UI에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 쓰시오.\n\n• (   )① : 사용자가 시스템이나 서비스를 이용하면서 느끼고 생각하게 되는 총체적인 감정 및 경험\n• (   )② : 사용자와 시스템 간의 상호작용이 원활하게 이뤄지도록 도와주는 장치나 소프트웨어\n[예] CLI, GUI 등",
       "options": [],
       "answer": [
-        "음성인식, 터치, 제스처",
-        "Voice Recognition, Touch, Gesture"
+        "① UX, ② UI",
+        "①UX ②UI",
+        "① User Experience, ② User Interface"
       ],
       "explanation": "",
       "images": [],
@@ -929,11 +874,16 @@
     },
     {
       "id": 59,
-      "question": "테스트 설계 기법 중 살충제 패러독스(Pesticide Paradox)에 대해 간략히 서술하시오.",
+      "question": "테스트 커버리지에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 보기에서 찾아 기호로 쓰시오.\n\n① 최소 한번은 모든 문장이 수행되도록 구성하는 검증 기준\n② 조건식이 참(True)/거짓(False)일 때 수행되도록 구성하는 검증 기준\n③ ②번과 달리 조건식에 상관없이 개별 조건이 참(True)/거짓(False)일 때 수행되도록 구성하는 기준\n\n<보기>\n㉠ 선택 검증 기준 ㉡ 다중 조건 검증 기준 ㉢ 조건 검증 기준\n㉣ 결정/분기 조건 검증 기준 ㉤ 결정/분기 검증 기준 ㉥ 구문(문장) 검증 기준",
       "options": [],
       "answer": [
-        "동일한 테스트 케이스로 반복 실행하면 새로운 결함을 찾아내지 못한다는 원리",
-        "같은 테스트를 반복하면 더 이상 새로운 결함을 발견할 수 없다"
+        "① ㉥, ② ㉤, ③ ㉢",
+        "①㉥ ②㉤ ③㉢",
+        "① 구문 검증 기준, ② 결정/분기 검증 기준, ③ 조건 검증 기준",
+        "① ㅂ, ② ㅁ, ③ ㄷ",
+        "①ㅂ ②ㅁ ③ㄷ",
+        "ㅂ, ㅁ, ㄷ",
+        "ㅂㅁㄷ"
       ],
       "explanation": "",
       "images": [],
@@ -973,12 +923,12 @@
     },
     {
       "id": 62,
-      "question": "다음의 순서도를 참고하여 분기 커버리지로 구성할 테스트 케이스를 작성하시오.\n작성예시: (10, 5), (15, 20)",
+      "question": "다음 평가 점수표와 케이스를 참고하여 동치 분할 기법을 적용한 테스트 케이스를 작성하시오.\n\n<보기>\n• Boundary Value Analysis • Equivalence Partition • Condition Test\n• Error Guess • Cause-Effect Graph • Comparison Test\n• Loop Test • Base Path Test • Data Flow Test",
       "options": [],
       "answer": [
-        "(10, 5), (15, 20)",
-        "(a=10, b=5), (a=15, b=20)",
-        "두 개의 분기를 모두 커버하는 테스트 케이스"
+        "Equivalence Partition",
+        "동치 분할",
+        "동치 클래스 분해"
       ],
       "explanation": "분기 커버리지는 모든 결정 포인트에서 참과 거짓을 모두 실행하는 테스트입니다.",
       "images": [],
@@ -987,12 +937,16 @@
     },
     {
       "id": 63,
-      "question": "명세 기반 테스트 설계 기법 중 동치 클래스 분해 및 경계값 분석을 이용하는 테스트 기법을 쓰시오.",
+      "question": "테스트 기법에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 보기에서 찾아 기호로 쓰시오.\n\n㉠ Condition Testing ㉡ Base Path Testing\n㉢ Equivalence Partitioning ㉣ Boundary Value Analysis\n㉤ Cause-Effect Graph ㉥ Data Flow Testing\n㉦ Statement Coverage Testing ㉧ Branch Coverage Testing\n㉨ Boundary Division Analysis",
       "options": [],
       "answer": [
-        "블랙박스 테스트",
-        "Black Box Test",
-        "명세 기반 테스트"
+        "① ㉢, ② ㉣",
+        "①㉢ ②㉣",
+        "① 동치 분할, ② 경계값 분석",
+        "① ㄷ, ② ㄹ",
+        "①ㄷ ②ㄹ",
+        "ㄷ, ㄹ",
+        "ㄷㄹ"
       ],
       "explanation": "",
       "images": [],
@@ -1001,11 +955,14 @@
     },
     {
       "id": 64,
-      "question": "테스트 오라클(Test Oracle) 중 '예상되는 출력값이 나오는지 실제 값과 비교'하는 명세 기반 테스트 기법을 보기에서 찾아 쓰시오.\n<보기>\n참 오라클, 샘플링 오라클, 추정 오라클, 일관성 검사 오라클",
+      "question": "테스트 기법에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 보기에서 찾아 기호로 쓰시오.\n\n<보기>\n• Boundary Value Analysis • Equivalence Partition • Condition Test\n• Error Guess • Cause-Effect Graph • Comparison Test\n• Loop Test • Base Path Test • Data Flow Test",
       "options": [],
       "answer": [
-        "참 오라클",
-        "True Oracle"
+        "Boundary Value Analysis",
+        "경계값 분석",
+        "ㄱ",
+        "① ㄱ",
+        "①ㄱ"
       ],
       "explanation": "",
       "images": [],
@@ -1042,12 +999,16 @@
     },
     {
       "id": 67,
-      "question": "명세 기반 테스트 중 '예상되는 출력값이 나오는지 실제 값과 비교'하는 명세 기반 테스트 기법을 쓰시오.",
+      "question": "테스트 레벨에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 보기에서 찾아 기호로 쓰시오.\n\n① 코딩 직후 소프트웨어 설계의 최소 단위인 모듈이나 컴포넌트에 초점을 맞춰 수행하는 테스트로, 모듈 테스트라고도 불린다. 사용자의 요구사항을 기반으로 한 기능성 테스트를 최우선으로 인터페이스, 외부적I/O, 자료구조, 독립적 기초 경로, 오류 처리 경로, 경계 조건 등을 검사한다.\n② 모듈들을 결합하여 하나의 시스템으로 완성시키는 과정에서의 테스트를 의미하며, 모듈 간 또는 컴포넌트 간의 인터페이스가 정상적으로 실행되는지 검사한다.\n\n<보기>\n㉠ 인수 테스트 ㉡ 시스템 테스트 ㉢ 알파 테스트 ㉣ 단위 테스트 ㉤ 회귀 테스트",
       "options": [],
       "answer": [
-        "동치 분할 테스트",
-        "Equivalence Partitioning",
-        "동치 클래스 분해"
+        "① ㉣, ② ㉡",
+        "①㉣ ②㉡",
+        "① 단위 테스트, ② 시스템 테스트",
+        "① ㄹ, ② ㄴ",
+        "①ㄹ ②ㄴ",
+        "ㄹ, ㄴ",
+        "ㄹㄴ"
       ],
       "explanation": "",
       "images": [
@@ -1058,11 +1019,12 @@
     },
     {
       "id": 68,
-      "question": "V-모델에서 각 단계별 테스트에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 쓰시오.\n• (   )① 단위 테스트(Unit Test)\n• (   )② 통합 테스트(Integration Test)\n• (   )③ 시스템 테스트(System Test)\n• (   )④ 인수 테스트(Acceptance Test)",
+      "question": "인수 테스트는 개발한 소프트웨어가 사용자의 요구사항을 충족하는지에 중점을 두고 테스트하는 방법이다.\n\n• (   )① : 선정된 최종 사용자가 여러 명의 사용자 앞에서 행하는 테스트 기법으로, 실제 업무를 가지고 사용자가 직접 테스트한다.\n• (   )② : 개발자의 장소에서 사용자가 개발자 앞에서 행하는 테스트 기법으로, 테스트는 통제된 환경에서 행해지며, 오류와 사용상의 문제점을 사용자와 개발자가 함께 확인하면서 기록한다.",
       "options": [],
       "answer": [
-        "① 단위 테스트, ② 통합 테스트, ③ 시스템 테스트, ④ 인수 테스트",
-        "① Unit Test, ② Integration Test, ③ System Test, ④ Acceptance Test"
+        "① 베타 테스트, ② 알파 테스트",
+        "① Beta Test, ② Alpha Test",
+        "①베타테스트 ②알파테스트"
       ],
       "explanation": "",
       "images": [
@@ -1103,14 +1065,12 @@
     },
     {
       "id": 71,
-      "question": "다음 설명에 해당하는 소프트웨어 아키텍처 패턴을 쓰시오.\n시스템을 여러 개의 계층으로 나누어 구성하는 아키텍처 패턴으로, 각 계층은 하위 계층의 서비스만을 이용하고 상위 계층에게 서비스를 제공한다.",
+      "question": "회귀 테스트에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 보기에서 찾아 쓰시오.\n\n• 통합 테스트로 인해 변경된 모듈이나 컴포넌트에 새로운 오류가 있는지 확인하는 테스트이다.\n• 이미 테스트된 프로그램의 테스팅을 반복하는 것이다.\n• 수정한 모듈이나 컴포넌트가 다른 부분에 영향을 미치는지 오류가 생기지 않았는지 테스트하여 새로운 오류가 발생하지 않음을 보증하기 위해 반복 테스트한다.\n\n<보기>\n• Big Bang Integration • System • Acceptance\n• Regression • Unit • White Box • Black Box",
       "options": [],
       "answer": [
-        "계층화 패턴",
-        "Layered Pattern",
-        "계층 패턴",
-        "레이어드 패턴",
-        "Layered Architecture"
+        "Regression",
+        "회귀 테스트",
+        "Regression Test"
       ],
       "explanation": "",
       "images": [],
@@ -1151,14 +1111,16 @@
     },
     {
       "id": 74,
-      "question": "다음 설명에 해당하는 테스트 기법을 쓰시오.\n소프트웨어의 내부 구조나 작동 원리를 모르는 상태에서 동작을 검사하는 테스트 기법으로, 기능 테스트라고도 한다.",
+      "question": "테스트 분석에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 보기에서 찾아 기호로 쓰시오.\n\n<보기>\n㉠ Running Analysis ㉡ Static Analysis ㉢ Test Execution\n㉣ Performance ㉤ Test Control ㉥ Dynamic Analysis\n㉦ Test Harness ㉧ Test Monitoring",
       "options": [],
       "answer": [
-        "블랙박스 테스트",
-        "Black Box Test",
-        "블랙박스테스트",
-        "기능 테스트",
-        "Functional Test"
+        "① ㉡, ② ㉥",
+        "①㉡ ②㉥",
+        "① Static Analysis, ② Dynamic Analysis",
+        "① ㄴ, ② ㅂ",
+        "①ㄴ ②ㅂ",
+        "ㄴ, ㅂ",
+        "ㄴㅂ"
       ],
       "explanation": "",
       "images": [
@@ -1363,13 +1325,12 @@
     },
     {
       "id": 88,
-      "question": "다음 설명에 해당하는 용어를 쓰시오.\n소프트웨어의 보안 취약점을 찾아내기 위해 수행하는 테스트로, 해킹 시도를 시뮤레이션한다.",
+      "question": "웹 기반 공격에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 보기에서 찾아 쓰시오.\n\n목표 조직이 자주 방문하는 웹 사이트를 사전에 감염시켜 목표 조직의 일원이 웹 사이트에 방문했을 때 악성 코드에 감염되게 한다. 이후에는 감염된 PC를 기반으로 조직의 중요 시스템에 접근하거나 불능으로 만드는 등의 영향력을 행사하는 웹 기반 공격이다.\n\n<보기>\n• Drive-by Download • Pharming • Watering Hole\n• Phishing • Business SCAM • Cyber Kill Chain\n• Sniffing",
       "options": [],
       "answer": [
-        "보안 테스트",
-        "Security Test",
-        "침투 테스트",
-        "Penetration Test"
+        "Watering Hole",
+        "워터링 홀",
+        "물웅덩이 공격"
       ],
       "explanation": "",
       "images": [],
@@ -1378,7 +1339,7 @@
     },
     {
       "id": 89,
-      "question": "다음 설명에 해당하는 용어를 쓰시오.\n소프트웨어가 다양한 환경(운영체제, 브라우저, 디바이스 등)에서 올바르게 동작하는지 확인하는 테스트이다.",
+      "question": "인증 관련 용어에 대한 다음 설명에서 괄호에 들어갈 알맞은 용어를 보기에서 찾아 쓰시오.\n\n<보기>\n• Authentication • Application • Avalanche\n• Authorization • Ascii",
       "options": [],
       "answer": [
         "호환성 테스트",

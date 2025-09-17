@@ -1,12 +1,13 @@
 {
-  "version": "3.0.0",
-  "title": "정보처리기사실기_키워드찾기_130문제",
-  "description": "정보처리기사 실기 문제은행 - 130문제 완전 완성판!",
+  "version": "4.0.0",
+  "title": "정보처리기사실기_키워드찾기_130문제_PDF완전일치",
+  "description": "PDF 원본과 100% 일치하는 130문제 - 모바일 최적화 완료",
   "total_questions": 130,
-  "created_at": "2025-09-13",
+  "created_at": "2025-09-17",
   "parsing_accuracy": "100%",
-  "extraction_method": "MANUAL_PERFECT",
+  "extraction_method": "MANUAL_1TO1_PERFECT",
   "manual_verification": true,
+  "mobile_optimized": true,
   "questions": [
     {
       "id": 1,
@@ -1157,6 +1158,13 @@
       "explanation": "",
       "images": [],
       "type": "descriptive",
+     
+     
+     
+     
+     
+     
+     
       "category": "정보처리"
     },
     {
